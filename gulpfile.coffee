@@ -15,7 +15,6 @@ addsrc      = require 'gulp-add-src'
 changed     = require 'gulp-changed'
 shorthand   = require 'gulp-shorthand'
 pkg         = require './package.json'
-_s          = require 'underscore.string'
 prefix      = require 'gulp-autoprefixer'
 strip       = require 'gulp-strip-css-comments'
 browserSync = require 'browser-sync'
@@ -26,28 +25,20 @@ reload      = browserSync.reload
 pkg.name = 'fink'
 
 dist =
-  name     : _s.slugify pkg.name
-  css      : 'assets/css'
-  js       : 'assets/js'
+  name     : pkg.name
+  css      : 'public/assets/css'
+  js       : 'public/assets/js'
 
 src =
   sass:
     main   : 'assets/scss/' + dist.name + '.scss'
     files  : ['assets/scss/**/**']
   js       :
-    main   : ['assets/js/src/__init.coffee'
-              'assets/js/src/main.coffee'
-              'assets/js/src/cover.coffee'
-              'assets/js/src/search.coffee']
-    vendor : ['assets/vendor/fastclick/lib/fastclick.js'
-              'assets/vendor/ghostHunter/jquery.ghostHunter.min.js'
-              'assets/vendor/pace/pace.min.js'
-              'assets/vendor/fitvids/jquery.fitvids.js'
-              'assets/vendor/reading-time/build/readingTime.min.js'
-              'assets/js/src/prism.js']
+    main   : []
+    vendor : []
   css      :
     main   : 'assets/css/' + dist.name + '.css'
-    vendor : []
+    vendor : ['bower_components/milligram/dist/milligram.min.css']
 
 banner = [ "/**"
            " * <%= pkg.name %> - <%= pkg.description %>"
