@@ -13,7 +13,7 @@ uglify      = require 'gulp-uglify'
 cssmin      = require 'gulp-cssmin'
 addsrc      = require 'gulp-add-src'
 changed     = require 'gulp-changed'
-shorthand    = require 'gulp-shorthand'
+shorthand   = require 'gulp-shorthand'
 pkg         = require './package.json'
 _s          = require 'underscore.string'
 prefix      = require 'gulp-autoprefixer'
@@ -21,10 +21,9 @@ strip       = require 'gulp-strip-css-comments'
 browserSync = require 'browser-sync'
 reload      = browserSync.reload
 
-PORT =
-  BROWSERSYNC: 3000
-
 # -- Files ---------------------------------------------------------------------
+
+pkg.name = 'fink'
 
 dist =
   name     : _s.slugify pkg.name
@@ -92,7 +91,7 @@ gulp.task 'server', ->
     proxy: "http://127.0.0.1:#{config.port}"
     files: ['assets/**/*.*']
     reloadDelay: 300
-    port: PORT.BROWSERSYNC
+    port: config.browserSync
   return
 
 gulp.task 'build', ['css', 'js']
