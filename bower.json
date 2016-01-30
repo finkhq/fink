@@ -1,0 +1,13 @@
+{
+  "name": "fink-www",
+  "description": "Frontend application for interact with fink API.",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

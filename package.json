@@ -1,0 +1,41 @@
+{
+  "name": "fink-www",
+  "description": "Frontend application for interact with fink API.",
+  "homepage": "https://github.com/finkhq/fink-www",
+  "version": "0.0.0",
+  "main": "./index.js",
+  "author": {
+    "email": "",
+    "name": "fink",
+    "url": "https://github.com/finkhq"
+  },
+  "repository": "finkhq/fink-www",
+  "bugs": {
+    "url": "https://github.com/finkhq/fink-www/issues"
+  },
+  "keywords": [],
+  "dependencies": {
+    "body-parser": "~1.14.2",
+    "compression": "~1.6.1",
+    "config": "~1.19.0",
+    "debug": "~2.2.0",
+    "express": "~4.13.4",
+    "express-hbs": "~0.8.4",
+    "helmet": "~1.1.0",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "git-dirty": "~1.0.1"
+  },
+  "engines": {
+    "node": ">= 4"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "lint": "",
+    "pretest": "npm run lint",
+    "test": "mocha"
+  },
+  "license": "MIT"
+}
