@@ -1,0 +1,46 @@
+/** HELPERS **/
+
+.center {
+  text-align: center;
+}
+
+/** global */
+
+body {
+  // background: url(https://www.emojibase.com/resources/img/emojis/apple/x1f400.png.pagespeed.ic.f3D0losS76.png);
+  // background-color: rgba(0, 0, 0, 0.6);
+}
+
+/** header */
+
+#header-container {
+  margin-bottom: 5rem;
+}
+
+/** form */
+
+#search-wrapper {
+  margin-top: 10%;
+}
+
+#search-container {
+  max-width: 80rem;
+}
+
+#search-label {
+  display: none;
+}
+
+#search-field {
+  width: 100%;
+  height: 6rem;
+  padding: 14.4px 23px;
+}
+
+#search-button {
+  height: 6rem;
+  border-radius: 0 3px 3px 0;
+  position: absolute;
+  top: 0;
+  right: 2rem;
+}

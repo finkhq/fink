@@ -31,8 +31,8 @@ dist =
 
 src =
   sass:
-    main   : 'assets/scss/' + dist.name + '.scss'
-    files  : ['assets/scss/**/**']
+    main   : 'public/assets/scss/' + dist.name + '.scss'
+    files  : ['public/assets/scss/**/**']
   js       :
     main   : []
     vendor : []
@@ -58,8 +58,7 @@ gulp.task 'css', ->
   .pipe sass().on 'error', gutil.log
   .pipe concat '' + dist.name + '.css'
   .pipe prefix()
-  .pipe strip
-    all: true
+  .pipe strip all: true
   .pipe shorthand()
   .pipe cssmin()
   .pipe header banner, pkg: pkg
@@ -80,7 +79,7 @@ gulp.task 'js', ->
 gulp.task 'server', ->
   browserSync.init null,
     proxy: "http://127.0.0.1:#{config.port}"
-    files: ['assets/**/*.*']
+    files: ['public/assets/**/*.*']
     reloadDelay: 300
     port: config.browserSync
   return
