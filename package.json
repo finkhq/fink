@@ -5,11 +5,13 @@
   "version": "0.0.0",
   "main": "./index.js",
   "author": {
-    "email": "",
     "name": "fink",
     "url": "https://github.com/finkhq"
   },
-  "repository": "finkhq/fink-www",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finkhq/fink-www.git"
+  },
   "bugs": {
     "url": "https://github.com/finkhq/fink-www/issues"
   },
@@ -50,6 +52,7 @@
     "clean": "rm -rf node_modules",
     "lint": "",
     "pretest": "npm run lint",
+    "server": "NODE_PATH=./ DEBUG=server nodemon index.js",
     "test": "mocha"
   },
   "license": "MIT"
