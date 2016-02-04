@@ -1,0 +1,38 @@
+#home-footer {
+  margin: $unit * 1.5 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#fink-logo,
+#home-container {
+  margin-bottom: $unit * 1;
+}
+
+#home-wrapper {
+  margin-top: 8%;
+}
+
+#search-container {
+  max-width: 80rem;
+}
+
+#search-label {
+  display: none;
+}
+
+#search-field {
+  width: 100%;
+  height: 6rem;
+  padding: 14.4px 23px;
+}
+
+#search-button {
+  height: 6rem;
+  border-radius: 0 3px 3px 0;
+  position: absolute;
+  top: 0;
+  right: $unit * 2;
+}
