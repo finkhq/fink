@@ -5,6 +5,7 @@
 config      = require 'config'
 gulp        = require 'gulp'
 gutil       = require 'gulp-util'
+riot        = require 'gulp-riot'
 sass        = require 'gulp-sass'
 concat      = require 'gulp-concat'
 coffee      = require 'gulp-coffee'
@@ -34,7 +35,7 @@ src =
     main   : 'app/client/scss/' + dist.name + '.scss'
     files  : ['app/client/scss/**/**']
   js       :
-    main   : []
+    main   : ['app/client/tag/**/**']
     vendor : []
   css      :
     main   : 'assets/css/' + dist.name + '.css'
@@ -68,7 +69,9 @@ gulp.task 'css', ->
 gulp.task 'js', ->
   gulp.src src.js.main
   .pipe changed dist.js
-  .pipe coffee().on 'error', gutil.log
+  .pipe riot({
+    compact: true
+  }).on 'error', gutil.log
   .pipe addsrc src.js.vendor
   .pipe concat '' + dist.name + '.js'
   .pipe uglify()
