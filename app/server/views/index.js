@@ -1,21 +1,21 @@
 'use strict'
 
 const hbs = require('express-hbs')
-const dirPath = require('../../util').dirPath
+const dirPath = require('../../lib/util').dirPath
 
 module.exports = function (app, express) {
   hbs.registerHelper('asset', require('./helpers/asset'))
 
   app.engine('hbs', hbs.express4({
-    partialsDir: dirPath('views/partials'),
-    layoutsDir: dirPath('views/layouts'),
+    partialsDir: dirPath('app/client/views/partials'),
+    layoutsDir: dirPath('app/client/views/layouts'),
     beautify: process.env.NODE_ENV !== 'production'
   }))
 
   app.set('view engine', 'hbs')
-  app.set('views', dirPath('views'))
+  app.set('views', dirPath('app/client/views'))
 
-  app.use(express.static(dirPath('public')))
+  app.use(express.static(dirPath('app/public')))
 
   return app
 }

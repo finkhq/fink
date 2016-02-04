@@ -26,13 +26,13 @@ pkg.name = 'fink'
 
 dist =
   name     : pkg.name
-  css      : 'public/assets/css'
-  js       : 'public/assets/js'
+  css      : 'app/public/assets/css'
+  js       : 'app/public/assets/js'
 
 src =
   sass:
-    main   : 'public/assets/scss/' + dist.name + '.scss'
-    files  : ['public/assets/scss/**/**']
+    main   : 'app/client/scss/' + dist.name + '.scss'
+    files  : ['app/client/scss/**/**']
   js       :
     main   : []
     vendor : []
@@ -79,7 +79,7 @@ gulp.task 'js', ->
 gulp.task 'server', ->
   browserSync.init null,
     proxy: "http://127.0.0.1:#{config.port}"
-    files: ['public/assets/**/*.*']
+    files: ['app/public/assets/**/*.*']
     reloadDelay: 300
     port: config.browserSync
   return
