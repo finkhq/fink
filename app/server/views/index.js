@@ -3,8 +3,6 @@
 const path = require('path')
 const hbs = require('express-hbs')
 
-console.log(path.resolve('app/public'))
-
 module.exports = function (app, express) {
   hbs.registerHelper('asset', require('./helpers/asset'))
 
