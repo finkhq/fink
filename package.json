@@ -15,7 +15,12 @@
   "bugs": {
     "url": "https://github.com/finkhq/fink-www/issues"
   },
-  "keywords": [],
+  "keywords": [
+    "fink",
+    "🐀",
+    "frontend",
+    "www"
+  ],
   "dependencies": {
     "body-parser": "~1.14.2",
     "compression": "~1.6.1",
@@ -23,6 +28,7 @@
     "debug": "~2.2.0",
     "express": "~4.13.4",
     "express-hbs": "~0.8.4",
+    "fink-is-valid-uri": "~1.0.0",
     "helmet": "~1.1.0",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0"
