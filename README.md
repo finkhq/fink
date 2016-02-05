@@ -11,7 +11,7 @@
 [![Dependency status](http://img.shields.io/david/finkhq/fink-www.svg?style=flat-square)](https://david-dm.org/finkhq/fink-www)
 [![Dev Dependencies Status](http://img.shields.io/david/dev/finkhq/fink-www.svg?style=flat-square)](https://david-dm.org/finkhq/fink-www#info=devDependencies)
 [![NPM Status](http://img.shields.io/npm/dm/fink-www.svg?style=flat-square)](https://www.npmjs.org/package/fink-www)
-[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/finkhq)
+[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/kikobeats)
 
 **NOTE:** more badges availables in [shields.io](http://shields.io/)
 
