@@ -31,6 +31,7 @@ dist =
   js       : 'app/public/assets/js'
 
 src =
+  views    : 'app/client/views/**/*.hbs'
   sass:
     main   : 'app/client/scss/' + dist.name + '.scss'
     files  : ['app/client/scss/**/**']
@@ -87,6 +88,7 @@ gulp.task 'server', ->
     proxy: "http://127.0.0.1:#{config.server.port}"
     files: ['app/public/assets/**/*.*']
     port: config.serverDev.port
+    reloadDelay: 1500
   return
 
 gulp.task 'build', ['css', 'js']
@@ -95,3 +97,4 @@ gulp.task 'default', ->
   gulp.start ['build', 'server']
   gulp.watch src.sass.files, ['css']
   gulp.watch [src.js.main, src.js.tag], ['js']
+  gulp.watch([src.views, src.js.tag]).on('change', reload)
