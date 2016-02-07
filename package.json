@@ -59,7 +59,7 @@
     "clean": "rm -rf node_modules",
     "lint": "",
     "pretest": "npm run lint",
-    "server": "NODE_PATH=./ DEBUG=server nodemon index.js",
+    "server": "NODE_PATH=./ DEBUG=fink-www nodemon index.js",
     "test": "mocha"
   },
   "license": "MIT"

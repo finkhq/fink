@@ -36,7 +36,9 @@ src =
     files  : ['app/client/scss/**/**']
   js       :
     main   : ['app/client/tag/**/**']
-    vendor : []
+    vendor : ['node_modules/fink-is-valid-uri/dist/fink-is-valid-uri.js'
+              'bower_components/es6-promise/promise.min.js'
+              'bower_components/fetch/fetch.js']
   css      :
     main   : 'assets/css/' + dist.name + '.css'
     vendor : ['bower_components/milligram/dist/milligram.min.css']
@@ -54,7 +56,7 @@ banner = [ "/**"
 
 gulp.task 'css', ->
   gulp.src src.css.vendor
-  .pipe changed dist.css
+  #.pipe changed dist.css
   .pipe addsrc src.sass.main
   .pipe sass().on 'error', gutil.log
   .pipe concat '' + dist.name + '.css'
@@ -68,7 +70,7 @@ gulp.task 'css', ->
 
 gulp.task 'js', ->
   gulp.src src.js.main
-  .pipe changed dist.js
+  #.pipe changed dist.js
   .pipe riot({
     compact: true
   }).on 'error', gutil.log
@@ -83,7 +85,8 @@ gulp.task 'server', ->
   browserSync.init null,
     proxy: "http://127.0.0.1:#{config.port}"
     files: ['app/public/assets/**/*.*']
-    reloadDelay: 300
+    reloadDelay: 1000
+    reloadDebounce: 1000
     port: config.browserSync
   return
 
