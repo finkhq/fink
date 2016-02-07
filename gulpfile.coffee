@@ -35,7 +35,8 @@ src =
     main   : 'app/client/scss/' + dist.name + '.scss'
     files  : ['app/client/scss/**/**']
   js       :
-    main   : ['app/client/tag/**/**']
+    main   : 'app/client/js/fink.js'
+    tag    : 'app/client/tag/**/**'
     vendor : ['node_modules/fink-is-valid-uri/dist/fink-is-valid-uri.js'
               'bower_components/es6-promise/promise.min.js'
               'bower_components/fetch/fetch.js']
@@ -69,12 +70,12 @@ gulp.task 'css', ->
   return
 
 gulp.task 'js', ->
-  gulp.src src.js.main
-  .pipe changed dist.js
+  gulp.src src.js.vendor
+  .pipe addsrc src.js.main
+  .pipe addsrc src.js.tag
   .pipe riot({
     compact: true
   }).on 'error', gutil.log
-  .pipe addsrc src.js.vendor
   .pipe concat '' + dist.name + '.js'
   .pipe uglify()
   .pipe header banner, pkg: pkg
@@ -85,8 +86,6 @@ gulp.task 'server', ->
   browserSync.init null,
     proxy: "http://127.0.0.1:#{config.server.port}"
     files: ['app/public/assets/**/*.*']
-    reloadDelay: 1000
-    reloadDebounce: 1000
     port: config.serverDev.port
   return
 
@@ -95,5 +94,4 @@ gulp.task 'build', ['css', 'js']
 gulp.task 'default', ->
   gulp.start ['build', 'server']
   gulp.watch src.sass.files, ['css']
-  gulp.watch src.js.main, ['js']
-  gulp.watch src.js.vendor, ['js']
+  gulp.watch [src.js.main, src.js.tag], ['js']
