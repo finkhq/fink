@@ -1,1 +1,4 @@
-$unit: 1rem;
+$unit      : 1rem;
+$code-font : courier, monospace;
+
+$gray      : #606c76;
