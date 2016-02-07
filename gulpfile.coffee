@@ -72,13 +72,13 @@ gulp.task 'css', ->
 
 gulp.task 'js', ->
   gulp.src src.js.vendor
-  .pipe addsrc src.js.main
   .pipe addsrc src.js.tag
+  .pipe addsrc src.js.main
   .pipe riot({
     compact: true
   }).on 'error', gutil.log
   .pipe concat '' + dist.name + '.js'
-  .pipe uglify()
+  .pipe uglify().on 'error', gutil.log
   .pipe header banner, pkg: pkg
   .pipe gulp.dest dist.js
   return

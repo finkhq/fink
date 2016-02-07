@@ -1,11 +1,13 @@
 'use strict'
 
-;(function (Fink, isValid, fetch) {
-  Fink.foo = 'bar'
-  Fink.isValidURI = function (uri) {
-    return isValid(window.location.hostname, uri)
+;(function (Fink, fetch, isURI) {
+  Fink.isURI = function (uri) {
+    return isURI(window.location.hostname, uri)
   }
+
   Fink.register = function (uri) {
+    console.log("'here")
+    console.log(fetch)
     return fetch(Fink.endpoint, {
       method: 'post',
       headers: {
@@ -19,4 +21,4 @@
       return response.json()
     })
   }
-})(window.Fink, require('fink-is-valid-uri'), window.fetch)
+})(window.Fink, window.fetch, require('fink-is-valid-uri')); // eslint-disable-line
