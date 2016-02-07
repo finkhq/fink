@@ -56,7 +56,7 @@ banner = [ "/**"
 
 gulp.task 'css', ->
   gulp.src src.css.vendor
-  #.pipe changed dist.css
+  .pipe changed dist.css
   .pipe addsrc src.sass.main
   .pipe sass().on 'error', gutil.log
   .pipe concat '' + dist.name + '.css'
@@ -70,7 +70,7 @@ gulp.task 'css', ->
 
 gulp.task 'js', ->
   gulp.src src.js.main
-  #.pipe changed dist.js
+  .pipe changed dist.js
   .pipe riot({
     compact: true
   }).on 'error', gutil.log
@@ -83,11 +83,11 @@ gulp.task 'js', ->
 
 gulp.task 'server', ->
   browserSync.init null,
-    proxy: "http://127.0.0.1:#{config.port}"
+    proxy: "http://127.0.0.1:#{config.server.port}"
     files: ['app/public/assets/**/*.*']
     reloadDelay: 1000
     reloadDebounce: 1000
-    port: config.browserSync
+    port: config.serverDev.port
   return
 
 gulp.task 'build', ['css', 'js']

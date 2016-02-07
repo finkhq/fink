@@ -1,6 +1,13 @@
 {
-  "protocol": "http",
-  "host": "localhost",
-  "port": 3001,
-  "browserSync": 1337
+  "server": {
+    "protocol": "http",
+    "host": "localhost",
+    "port": 3000
+  },
+
+  "serverDev": {
+    "port": 4000
+  },
+
+  "api": "http://localhost:1337"
 }

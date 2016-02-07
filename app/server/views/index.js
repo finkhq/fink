@@ -9,7 +9,7 @@ module.exports = function (app, express) {
   app.engine('hbs', hbs.express4({
     partialsDir: path.resolve('app/client/views/partials'),
     layoutsDir: path.resolve('app/client/views/layouts'),
-    beautify: process.env.NODE_ENV !== 'production'
+    beautify: app.locals.isProduction
   }))
 
   app.set('view engine', 'hbs')
