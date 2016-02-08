@@ -13,6 +13,7 @@
   "dependencies": {
     "milligram": "~1.0.3",
     "fetch": "~0.11.0",
-    "es6-promise": "~3.0.2"
+    "es6-promise": "~3.0.2",
+    "clipboard": "^1.5.8"
   }
 }

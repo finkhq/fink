@@ -40,7 +40,8 @@ src =
     tag    : 'app/client/tag/**/**'
     vendor : ['node_modules/fink-is-valid-uri/dist/fink-is-valid-uri.js'
               'bower_components/es6-promise/promise.min.js'
-              'bower_components/fetch/fetch.js']
+              'bower_components/fetch/fetch.js'
+              'bower_components/clipboard/dist/clipboard.min.js']
   css      :
     main   : 'assets/css/' + dist.name + '.css'
     vendor : ['bower_components/milligram/dist/milligram.min.css']

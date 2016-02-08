@@ -13,16 +13,16 @@
 
   <section id="shorten-link" class="container" show="{isFetched}">
     <label>URL Shorten</label>
-    <input class="shorten-text" type="text" value="http://imgur.com/fbdvHtT" onClick="this.select();" readonly>
-    <button class="copy-button" data-clipboard-target="#foo">
+    <input id="uri-hash" class="shorten-text" type="text" value="http://imgur.com/fbdvHtT" onClick="this.select();" readonly>
+    <button class="copy-button" data-clipboard-target="#uri-hash">
       <img class="copy-clipboard" src="assets/images/clipboard.png" alt="Copy to clipboard">
     </button>
   </section>
 
   <section id="shorten-link" class="container" show="{isFetched}">
     <label>URL Shorten Emojify</label>
-    <input class="shorten-text" type="text" value="http://imgur.com/fbdvHtT" onClick="this.select();" readonly>
-    <button class="copy-button" data-clipboard-target="#foo">
+    <input id="uri-hash-emoji" class="shorten-text" type="text" value="http://imgur.com/fbdvHtT" onClick="this.select();"readonly>
+    <button class="copy-button" data-clipboard-target="#uri-hash-emoji">
       <img class="copy-clipboard" src="assets/images/clipboard.png" alt="Copy to clipboard">
     </button>
   </section>
