@@ -37,23 +37,20 @@
     }
 
     send(e) {
-      if (Fink.isURI(this.uri)) {
-        this['shorten-button'].classList.add('in-action')
-        this.spinner.classList.remove('hide')
-        this.spinner.classList.add('show')
 
-        var _this = this
+      if (!Fink.isURI(this.uri)) return Fink.buzz()
 
-        Fink.register(this.uri)
-        .then(function(json) {
-          _this.isFetched = true
-          console.log("'yeah");
-        })
-        .catch(function() {
-          console.log('something is wrong');
-          console.log(arguments);
-        })
-      }
+      var _this = this
+
+      this['shorten-button'].classList.add('in-action')
+      this.spinner.classList.remove('hide')
+      this.spinner.classList.add('show')
+
+      Fink.register(this.uri)
+      .then(function(json) {
+        new Clipboard('.copy-button')
+        _this.isFetched = true
+      })
     }
 
   </script>
