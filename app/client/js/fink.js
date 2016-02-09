@@ -6,8 +6,6 @@
   }
 
   Fink.register = function (uri) {
-    console.log("'here")
-    console.log(fetch)
     return fetch(Fink.endpoint, {
       method: 'post',
       headers: {
@@ -20,5 +18,13 @@
     }).then(function (response) {
       return response.json()
     })
+  }
+
+  Fink.buzz = function () {
+    var elem = document.getElementById('fink-logo')
+    elem.classList.add('toggleBuzz')
+    setTimeout(function () {
+      elem.classList.remove('toggleBuzz')
+    }, 750)
   }
 })(window.Fink, window.fetch, require('fink-is-valid-uri')); // eslint-disable-line
