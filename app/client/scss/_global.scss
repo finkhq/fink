@@ -142,7 +142,8 @@ input {
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
 }
-.buzz:hover, .buzz:focus, .buzz:active {
+.buzz:hover, .buzz:focus, .buzz:active,
+.toggleBuzz {
   -webkit-animation-name: buzz;
   animation-name: buzz;
   -webkit-animation-duration: 0.75s;
