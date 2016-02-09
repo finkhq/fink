@@ -1,8 +1,9 @@
 'use strict'
 
-;(function (Fink, fetch, isURI) {
+;(function (Fink, fetch, _isURI, parseURI) {
   Fink.isURI = function (uri) {
-    return isURI(window.location.hostname, uri)
+    uri = parseURI(uri)
+    return (uri.hostname !== window.location.hostname) && _isURI(uri, {strictMode: true})
   }
 
   Fink.register = function (uri) {
@@ -27,4 +28,4 @@
       elem.classList.remove('toggleBuzz')
     }, 750)
   }
-})(window.Fink, window.fetch, require('fink-is-valid-uri')); // eslint-disable-line
+})(window.Fink, window.fetch, require('isURI'), require('parse-uri')); // eslint-disable-line

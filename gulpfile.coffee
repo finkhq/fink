@@ -38,7 +38,8 @@ src =
   js       :
     main   : 'app/client/js/fink.js'
     tag    : 'app/client/tag/**/**'
-    vendor : ['node_modules/fink-is-valid-uri/dist/fink-is-valid-uri.js'
+    vendor : ['node_modules/parse-uri/dist/parse-uri.js'
+              'node_modules/is-uri/dist/is-uri.js'
               'bower_components/es6-promise/promise.min.js'
               'bower_components/fetch/fetch.js'
               'bower_components/clipboard/dist/clipboard.min.js']
