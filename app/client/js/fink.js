@@ -3,7 +3,10 @@
 ;(function (Fink, fetch, _isURI, parseURI) {
   Fink.isURI = function (uri) {
     uri = parseURI(uri)
-    return (uri.hostname !== window.location.hostname) && _isURI(uri, {strictMode: true})
+
+    return uri.hostname !== 'localhost' &&
+    uri.hostname !== window.location.hostname &&
+    _isURI(uri, {strictMode: true})
   }
 
   Fink.register = function (uri) {
