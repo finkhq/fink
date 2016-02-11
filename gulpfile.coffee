@@ -89,6 +89,7 @@ gulp.task 'server', ->
     proxy: "http://127.0.0.1:#{config.server.port}"
     files: ['app/public/assets/**/*.*']
     port: config.serverDev.port
+    reloadDelay: 1000
   return
 
 gulp.task 'build', ['css', 'js']
