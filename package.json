@@ -31,6 +31,7 @@
     "fink-is-uri": "~1.0.1",
     "helmet": "~1.1.0",
     "morgan": "~1.6.1",
+    "riot": "~2.3.15",
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
