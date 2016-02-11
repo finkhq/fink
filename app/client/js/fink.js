@@ -2,11 +2,7 @@
 
 ;(function (Fink, fetch, _isURI, parseURI) {
   Fink.isURI = function (uri) {
-    uri = parseURI(uri)
-
-    return uri.hostname !== 'localhost' &&
-    uri.hostname !== window.location.hostname &&
-    _isURI(uri, {strictMode: true})
+    return _isURI(uri, window.location.hostname)
   }
 
   Fink.register = function (uri) {
@@ -31,4 +27,4 @@
       elem.classList.remove('toggleBuzz')
     }, 750)
   }
-})(window.Fink, window.fetch, require('isURI'), require('parse-uri')); // eslint-disable-line
+})(window.Fink, window.fetch, require('fink-is-uri')); // eslint-disable-line
