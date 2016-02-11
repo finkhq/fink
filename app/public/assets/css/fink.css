@@ -1,6 +1,6 @@
 /**
  * fink - Frontend application for interact with fink API.
- * @version 0.1.0
+ * @version 0.2.0
  * @link    https://github.com/finkhq/fink-www
  * @author  fink (https://github.com/finkhq)
  * @license MIT

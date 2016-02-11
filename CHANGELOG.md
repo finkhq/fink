@@ -1,3 +1,24 @@
+<a name="0.2.0"></a>
+# 0.2.0 (2016-02-11)
+
+
+* Add minimal delay ([e1c3bd1](https://github.com/finkhq/fink-www/commit/e1c3bd1))
+* Add riot dep ([d12cd0d](https://github.com/finkhq/fink-www/commit/d12cd0d))
+* Avoid config module, use plain js ([64ca773](https://github.com/finkhq/fink-www/commit/64ca773))
+* Fix reload components ([9012631](https://github.com/finkhq/fink-www/commit/9012631))
+* Fix require ([cc8a4bc](https://github.com/finkhq/fink-www/commit/cc8a4bc))
+* Fix typo ([9c6d73c](https://github.com/finkhq/fink-www/commit/9c6d73c))
+* Merge fink-api in the same project ([84256d2](https://github.com/finkhq/fink-www/commit/84256d2))
+* More simple ([fcd17b3](https://github.com/finkhq/fink-www/commit/fcd17b3))
+* Remove fixture values ([80c0ada](https://github.com/finkhq/fink-www/commit/80c0ada))
+* update ([4b911cd](https://github.com/finkhq/fink-www/commit/4b911cd))
+* update dep ([bf2f117](https://github.com/finkhq/fink-www/commit/bf2f117))
+* Update README.md ([b7ca5ab](https://github.com/finkhq/fink-www/commit/b7ca5ab))
+* Update values ([c458449](https://github.com/finkhq/fink-www/commit/c458449))
+* Use piping instead of nodemon ([8c3cbe7](https://github.com/finkhq/fink-www/commit/8c3cbe7))
+
+
+
 <a name="0.1.0"></a>
 # 0.1.0 (2016-02-11)
 
@@ -9,8 +30,8 @@
 * chore(package): update gulp to version 3.9.1 ([b37f3d1](https://github.com/finkhq/fink-www/commit/b37f3d1))
 * chore(package): update gulp-uglify to version 1.5.2 ([00ee226](https://github.com/finkhq/fink-www/commit/00ee226))
 
-* Add buzz animation ([9de45d1](https://github.com/finkhq/fink-www/commit/9de45d1))
 * Add buzz animation ([0243559](https://github.com/finkhq/fink-www/commit/0243559))
+* Add buzz animation ([9de45d1](https://github.com/finkhq/fink-www/commit/9de45d1))
 * Add clipboard dependency ([94c0f28](https://github.com/finkhq/fink-www/commit/94c0f28))
 * Add fetch dependency ([91fc154](https://github.com/finkhq/fink-www/commit/91fc154))
 * Add Fink animation ([5509b4a](https://github.com/finkhq/fink-www/commit/5509b4a))
@@ -42,10 +63,11 @@
 * Not fire send during typing ([c390b70](https://github.com/finkhq/fink-www/commit/c390b70))
 * Play time ([900de0e](https://github.com/finkhq/fink-www/commit/900de0e))
 * Register asset helper ([722f64c](https://github.com/finkhq/fink-www/commit/722f64c))
+* Release 0.1.0 ([b153f51](https://github.com/finkhq/fink-www/commit/b153f51))
 * Renaming ([1f07beb](https://github.com/finkhq/fink-www/commit/1f07beb))
-* Update ([b090fbc](https://github.com/finkhq/fink-www/commit/b090fbc))
 * Update ([941bee3](https://github.com/finkhq/fink-www/commit/941bee3))
 * Update ([6d67ef1](https://github.com/finkhq/fink-www/commit/6d67ef1))
+* Update ([b090fbc](https://github.com/finkhq/fink-www/commit/b090fbc))
 * Update building process ([4188cb8](https://github.com/finkhq/fink-www/commit/4188cb8))
 * Update dep ([52ef484](https://github.com/finkhq/fink-www/commit/52ef484))
 * Update scripts ([13bee47](https://github.com/finkhq/fink-www/commit/13bee47))
