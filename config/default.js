@@ -2,11 +2,8 @@ module.exports = {
   server: {
     protocol: 'http',
     host: 'localhost',
-    port: 3000
-  },
-
-  serverDev: {
-    port: 4000
+    port: 3000,
+    portDev: 4000
   },
 
   database: {

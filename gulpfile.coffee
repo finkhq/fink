@@ -2,7 +2,7 @@
 
 # -- Dependencies --------------------------------------------------------------
 
-config      = require 'config'
+config      = require './config'
 gulp        = require 'gulp'
 gutil       = require 'gulp-util'
 riot        = require 'gulp-riot'
@@ -88,7 +88,7 @@ gulp.task 'server', ->
   browserSync.init null,
     proxy: "http://127.0.0.1:#{config.server.port}"
     files: ['app/public/assets/**/*.*']
-    port: config.serverDev.port
+    port: config.server.portDev
     reloadDelay: 1000
   return
 
