@@ -47,6 +47,8 @@
       Fink.register(this.uri)
       .then(function(json) {
         new Clipboard('.copy-button')
+        _this['uri-hash'].value = Fink.path(json.data.hash)
+        _this['uri-hash-emoji'].value = Fink.path(json.data.hashEmoji)
         _this.isFetched = true
         _this.update()
       })

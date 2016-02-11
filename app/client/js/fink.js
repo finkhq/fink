@@ -5,6 +5,10 @@
     return _isURI(uri, window.location.hostname)
   }
 
+  Fink.path = function (relative) {
+    return window.location.href + relative
+  }
+
   Fink.register = function (uri) {
     return fetch(Fink.endpoint, {
       method: 'post',
