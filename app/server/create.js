@@ -6,35 +6,38 @@ const pkg = require('../../package.json')
 const express = require('express')
 const app = express()
 
+// middlewares
+const morgan = require('morgan')
+const cors = require('cors')
+const compress = require('compression')
 const helmet = require('helmet')
+const jsendp = require('jsendp')
 const bodyParser = require('body-parser')
 const favicon = require('serve-favicon')
-const compress = require('compression')
-const morgan = require('morgan')
 
-const isProduction = process.env.NODE_ENV === 'production'
-const url_canonical = `${config.server.protocol}://${config.server.host}:${config.server.port}`
-
-app.use(compress())
-if (isProduction) app.use(morgan('combined'))
+// app.use(favicon(__dirname + '/public/favicon.ico'))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(helmet())
-
-// app.use(favicon(__dirname + '/public/favicon.ico'))
-
-app.locals.isProduction = isProduction
-app.locals.url_canonical = url_canonical
-app.locals.FINK_ENDPOINT = config.api
-app.locals.FINK_VERSION = pkg.version
-
-app.disable('x-powered-by')
-
-require('./views')(app, express)
-require('./routes')(app)
+app.use(compress())
+app.use(cors())
+app.use(jsendp())
 
 module.exports = function (cb) {
-  app.listen(config.server.port, function () {
-    return cb(url_canonical)
-  })
+  const isProduction = process.env.NODE_ENV === 'production'
+  const url_canonical = `${config.server.protocol}://${config.server.host}:${config.server.port}`
+
+  if (isProduction) app.use(morgan('combined'))
+
+  app.locals.isProduction = isProduction
+  app.locals.url_canonical = url_canonical
+  app.locals.FINK_ENDPOINT = config.server.api
+  app.locals.FINK_VERSION = pkg.version
+
+  app.disable('x-powered-by')
+
+  require('./views')(app, express)
+  require('./routes')(app)
+
+  return cb(url_canonical)
 }

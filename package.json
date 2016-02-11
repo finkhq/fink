@@ -22,14 +22,20 @@
     "🐀"
   ],
   "dependencies": {
+    "async": "~1.5.2",
+    "base64-emoji": "~2.1.0",
     "body-parser": "~1.15.0",
     "compression": "~1.6.1",
     "config": "~1.19.0",
+    "cors": "~2.7.1",
     "debug": "~2.2.0",
     "express": "~4.13.4",
     "express-hbs": "~0.8.4",
     "fink-is-uri": "~1.0.1",
+    "fink-level": "~1.0.2",
     "helmet": "~1.1.0",
+    "level": "~1.4.0",
+    "lodash": "~4.3.0",
     "morgan": "~1.6.1",
     "riot": "~2.3.15",
     "serve-favicon": "~2.3.0"
@@ -52,7 +58,11 @@
     "gulp-strip-css-comments": "~1.2.0",
     "gulp-uglify": "~1.5.2",
     "gulp-util": "~3.0.7",
-    "piping": "~0.3.0"
+    "level-mem": "~0.18.0",
+    "mocha": "latest",
+    "piping": "~0.3.0",
+    "should": "latest",
+    "standard": "latest"
   },
   "engines": {
     "node": ">= 4"

@@ -9,5 +9,9 @@
     "port": 4000
   },
 
-  "api": "http://localhost:1337"
+  "database": {
+    "connector": "level-mem",
+    "path": "./fink.db",
+    "counter": "__id"
+  }
 }
