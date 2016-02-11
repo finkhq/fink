@@ -1,6 +1,6 @@
 'use strict'
 
-const config = require('config')
+const config = require('config').server
 const pkg = require('../../package.json')
 
 const express = require('express')
@@ -25,19 +25,20 @@ app.use(jsendp())
 
 module.exports = function (cb) {
   const isProduction = process.env.NODE_ENV === 'production'
-  const url_canonical = `${config.server.protocol}://${config.server.host}:${config.server.port}`
+  const url_canonical = `${config.protocol}://${config.host}:${config.port}`
+
+  require('./views')(app, express)
+  require('./routes')(app)
 
   if (isProduction) app.use(morgan('combined'))
 
   app.locals.isProduction = isProduction
   app.locals.url_canonical = url_canonical
-  app.locals.FINK_ENDPOINT = config.server.api
   app.locals.FINK_VERSION = pkg.version
 
   app.disable('x-powered-by')
 
-  require('./views')(app, express)
-  require('./routes')(app)
-
-  return cb(url_canonical)
+  app.listen(config.port, function () {
+    return cb(url_canonical)
+  })
 }

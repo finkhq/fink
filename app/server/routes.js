@@ -2,10 +2,7 @@
 
 const riot = require('riot')
 const lodash = require('lodash')
-
 const config = require('config').database
-config.connector = require(config.connector)
-
 const URI = require('fink-level')(config)
 const isURI = require('fink-is-uri')
 const shorten = require('app/client/tag/shorten')
