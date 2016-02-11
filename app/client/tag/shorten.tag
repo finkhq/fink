@@ -38,7 +38,6 @@
     send(e) {
 
       if (!Fink.isURI(this.uri)) return Fink.buzz()
-
       var _this = this
 
       this['shorten-button'].classList.add('in-action')
@@ -49,6 +48,7 @@
       .then(function(json) {
         new Clipboard('.copy-button')
         _this.isFetched = true
+        _this.update()
       })
     }
 
