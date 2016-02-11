@@ -57,10 +57,10 @@
   },
   "scripts": {
     "clean": "rm -rf node_modules",
-    "lint": "",
+    "lint": "standard app",
     "pretest": "npm run lint",
     "server": "NODE_PATH=./ DEBUG=fink-www nodemon index.js --delay 1",
-    "test": "mocha"
+    "test": "echo 'no test (yet)'"
   },
   "license": "MIT"
 }
