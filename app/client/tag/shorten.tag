@@ -33,7 +33,6 @@
 
     edit(e) {
       this.uri = e.target.value
-      this.send()
     }
 
     send(e) {
