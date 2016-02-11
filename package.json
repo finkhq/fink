@@ -22,7 +22,7 @@
     "www"
   ],
   "dependencies": {
-    "body-parser": "~1.14.2",
+    "body-parser": "~1.15.0",
     "compression": "~1.6.1",
     "config": "~1.19.0",
     "debug": "~2.2.0",
