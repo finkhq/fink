@@ -51,7 +51,8 @@
     "gulp-shorthand": "~1.1.0",
     "gulp-strip-css-comments": "~1.2.0",
     "gulp-uglify": "~1.5.2",
-    "gulp-util": "~3.0.7"
+    "gulp-util": "~3.0.7",
+    "piping": "~0.3.0"
   },
   "engines": {
     "node": ">= 4"
@@ -60,7 +61,7 @@
     "clean": "rm -rf node_modules",
     "lint": "standard app",
     "pretest": "npm run lint",
-    "server": "NODE_PATH=./ DEBUG=fink-www nodemon index.js --delay 1",
+    "server": "NODE_PATH=./ DEBUG=fink-www node index.js",
     "test": "echo 'no test (yet)'"
   },
   "license": "MIT"
