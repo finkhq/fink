@@ -21,7 +21,7 @@
 * Unique identifier per URI. Not possible store duplicates!
 * Stats associated with each URI.
 * Redirect between protocols.
-* Emoji support 😁😎🤓.
+* Emoji support 😁🤓😎.
 
 ## License
 
