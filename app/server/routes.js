@@ -1,19 +1,26 @@
 'use strict'
 
-const riot = require('riot')
 const lodash = require('lodash')
-const config = require('config').database
-const URI = require('fink-level')(config)
+const numeral = require('numeral')
 const isURI = require('fink-is-uri')
+const config = require('config')
+const URI = require('fink-level')(config.database)
+
+const riot = require('riot')
+const stats = require('app/client/tag/stats')
 const shorten = require('app/client/tag/shorten')
 
 function getValue (instance) {
   return JSON.parse(lodash.get(lodash.first(instance), 'value'))
 }
 
+function relativeURI (relative) {
+  return `${config.server.protocol}://${config.server.host}/${relative}`
+}
+
 module.exports = function (app) {
   app.get('/', function (req, res) {
-    res.render('home', {
+    return res.render('home', {
       title: 'URL Shortener for Masses',
       content: riot.render(shorten)
     })
@@ -42,7 +49,17 @@ module.exports = function (app) {
         if (err) return res.error(err)
         if (!isRegister) return res.fail(404)
         instance = getValue(instance)
-        res.success(instance)
+
+        var opts = {
+          hash: relativeURI(instance.hash),
+          hashEmoji: relativeURI(instance.hashEmoji),
+          hits: numeral(instance.hits).format('0,0')
+        }
+
+        return res.render('stats', {
+          title: 'URL Shortener for Masses',
+          content: riot.render(stats, opts)
+        })
       })
     }
 

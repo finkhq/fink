@@ -1,5 +1,5 @@
 <shorten>
-  <section id="shorten-container" class="container" hide="{isFetched}">
+  <section id="shorten-search" class="container" hide="{isFetched}">
     <form id="shorten-form" onsubmit={ send }>
       <fieldset>
         <input oninput={ edit } id="shorten-field" type="search" taborder="1" placeholder="Paste a link to shorten it" autofocus>
@@ -11,20 +11,22 @@
     </form>
   </section>
 
-  <section id="shorten-link" class="container" show="{isFetched}">
-    <label>URL Shorten</label>
-    <input id="uri-hash" class="shorten-text" type="text" onClick="this.select();" readonly>
-    <button class="copy-button" data-clipboard-target="#uri-hash">
-      <img class="copy-clipboard" src="assets/images/clipboard.png" alt="Copy to clipboard">
-    </button>
-  </section>
+  <section id="shorten-results" class="container" show="{isFetched}">
+    <div class="shorten-box container">
+      <label>URL Shorten</label>
+      <input value={hash} id="uri-hash" class="shorten-text" type="text" onClick="this.select();" readonly>
+      <button class="copy-button" data-clipboard-target="#uri-hash">
+        <img class="copy-clipboard" src="assets/images/clipboard.png" alt="Copy to clipboard">
+      </button>
+    </div>
 
-  <section id="shorten-link" class="container" show="{isFetched}">
-    <label>URL Shorten Emojify</label>
-    <input id="uri-hash-emoji" class="shorten-text" type="text" onClick="this.select();"readonly>
-    <button class="copy-button" data-clipboard-target="#uri-hash-emoji">
-      <img class="copy-clipboard" src="assets/images/clipboard.png" alt="Copy to clipboard">
-    </button>
+    <div class="shorten-box container">
+      <label>URL Shorten Emojify</label>
+      <input value={hashEmoji} id="uri-hash-emoji" class="shorten-text" type="text" onClick="this.select();"readonly>
+      <button class="copy-button" data-clipboard-target="#uri-hash-emoji">
+        <img class="copy-clipboard" src="assets/images/clipboard.png" alt="Copy to clipboard">
+      </button>
+    </div>
   </section>
 
   <script>
@@ -35,8 +37,15 @@
       this.uri = e.target.value
     }
 
-    send(e) {
+    this.resolveURI = function(hash, hashEmoji) {
+      new Clipboard('.copy-button')
+      this.hash = Fink.path(hash)
+      this.hashEmoji = Fink.path(hashEmoji)
+      this.isFetched = true
+      this.update()
+    }
 
+    send(e) {
       if (!Fink.isURI(this.uri)) return Fink.buzz()
       var _this = this
 
@@ -46,11 +55,7 @@
 
       Fink.register(this.uri)
       .then(function(json) {
-        new Clipboard('.copy-button')
-        _this['uri-hash'].value = Fink.path(json.data.hash)
-        _this['uri-hash-emoji'].value = Fink.path(json.data.hashEmoji)
-        _this.isFetched = true
-        _this.update()
+        _this.resolveURI(json.data.hash, json.data.hashEmoji)
       })
     }
 

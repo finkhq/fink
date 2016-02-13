@@ -7,15 +7,15 @@
 }
 
 #fink-logo,
-#home-container {
-  margin-bottom: $unit * 1;
+#shorten-results {
+  margin-bottom: $unit * 3;
 }
 
 #home-wrapper {
   margin-top: 8%;
 }
 
-#shorten-container {
+#shorten-search {
   max-width: 80rem;
 }
 
@@ -44,24 +44,26 @@
   }
 }
 
-#shorten-link {
-  width: 40rem;
+.shorten-box {
+  width: 36rem !important;
   display: inline-block;
 }
 
 .shorten-text {
   font-family: $code-font;
-  color: lighten($gray, 25%)
+  color: lighten($gray, 25%);
 }
 
 .copy-button {
   height: 38px;
   width: 45px;
   padding: 0;
-  border-radius: 0 3px 3px 0;
-  position: absolute;
-  top: 30px;
-  right: 2rem;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 137px;
+  top: -53px;
+  margin: 0;
 }
 
 .copy-clipboard {
