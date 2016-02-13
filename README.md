@@ -1,4 +1,4 @@
-# fink-www
+# fink
 
 <p align="center">
   <br>
@@ -14,7 +14,14 @@
 [![NPM Status](http://img.shields.io/npm/dm/fink-www.svg?style=flat-square)](https://www.npmjs.org/package/fink-www)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/kikobeats)
 
-> Frontend application for interact with fink API.
+> URL Shortener for Massses.
+
+* Extremely Faster.
+* Small URL possible based into an internal counter.
+* Unique identifier per URI. Not possible store duplicates!
+* Stats associated with each URI.
+* Redirect between protocols.
+* Emoji support 😁😎🤓.
 
 ## License
 
