@@ -22,7 +22,8 @@ module.exports = function (app) {
   app.get('/', function (req, res) {
     return res.render('home', {
       content: riot.render(shorten),
-      isHome: true
+      isHome: true,
+      isAbsolute: true
     })
   })
 
@@ -61,7 +62,8 @@ module.exports = function (app) {
         }
 
         return res.render('stats', {
-          content: riot.render(stats, opts)
+          content: riot.render(stats, opts),
+          isAbsolute: true
         })
       })
     }
