@@ -44,7 +44,8 @@ src =
               'bower_components/clipboard/dist/clipboard.min.js']
   css      :
     main   : 'assets/css/' + dist.name + '.css'
-    vendor : ['bower_components/milligram/dist/milligram.min.css']
+    vendor : ['bower_components/normalize-css/normalize.css'
+              'bower_components/milligram/dist/milligram.min.css' ]
 
 banner = [ "/**"
            " * <%= pkg.name %> - <%= pkg.description %>"
