@@ -9,7 +9,9 @@ function run () {
   })
 }
 
-if (process.env.NODE_ENV === 'production') return run()
-if (require("piping")({
-  ignore: /node_modules|bower_components|fink.db|.git|.DS_Store/
-})) run()
+run()
+
+// if (process.env.NODE_ENV === 'production') return run()
+// if (require("piping")({
+//   ignore: /node_modules|bower_components|fink.db|.git|.DS_Store/
+// })) run()

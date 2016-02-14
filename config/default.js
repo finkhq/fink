@@ -7,7 +7,7 @@ module.exports = {
   },
 
   database: {
-    connector: require('level-mem'),
+    connector: require('level'),
     path: './fink.db',
     counter: '__id'
   }

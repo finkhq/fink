@@ -26,6 +26,10 @@ module.exports = function (app) {
     })
   })
 
+  app.get('/faq', function (req, res) {
+    return res.render('faq')
+  })
+
   app.get('/:hash', function (req, res) {
     let hash = req.params.hash
 

@@ -37,8 +37,8 @@
   <body>
     {{{body}}}
 
-    <footer class="center">
-      <a href="/about">About</a>
+    <footer id="footer" class="center {{#if isHome}}absolute{{/if}}">
+      <a href="/faq">FAQ</a>
       <a href="/contact">Contact</a>
 
       {{#unless isHome}}
