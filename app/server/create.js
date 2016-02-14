@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(helmet())
 app.use(compress())
-
+app.use(morgan('combined'))
 app.use(jsendp())
 
 module.exports = function (cb) {
@@ -28,8 +28,6 @@ module.exports = function (cb) {
 
   require('./views')(app, express)
   require('./routes')(app)
-
-  if (isProduction) app.use(morgan('combined'))
 
   app.locals.isProduction = isProduction
   app.locals.url_canonical = url_canonical
