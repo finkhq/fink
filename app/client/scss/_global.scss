@@ -3,6 +3,18 @@ input {
   cursor: -webkit-image-set( url('../images/cursor@1x.png') 1x, url('../images/cursor@2x.png') 2x ), auto;
 }
 
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+
+  > a {
+    margin: 1rem;
+  }
+}
+
 #spinner {
   position: absolute;
   width: 26px;

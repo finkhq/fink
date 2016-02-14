@@ -17,6 +17,17 @@
   </head>
   <body>
     {{{body}}}
+
+    <footer class="center">
+      <a href="" title="What?">About</a>
+      <a href="" title="What?">Contact</a>
+
+
+      {{#unless isHome}}
+        <a href="" title="What?">🐀</a>
+      {{/unless}}
+    </footer>
+
     {{> scripts/footer}}
   </body>
 </html>

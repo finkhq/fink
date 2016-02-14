@@ -22,7 +22,8 @@ module.exports = function (app) {
   app.get('/', function (req, res) {
     return res.render('home', {
       title: 'URL Shortener for Masses',
-      content: riot.render(shorten)
+      content: riot.render(shorten),
+      isHome: true
     })
   })
 
