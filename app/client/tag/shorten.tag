@@ -11,7 +11,7 @@
     </form>
   </section>
 
-  <section id="shorten-results" class="container" show="{isFetched}">
+  <section id="shorten-results" show="{isFetched}">
     <div class="shorten-box container">
       <label>URL Shorten</label>
       <input value={hash} id="uri-hash" class="shorten-text" type="text" onClick="this.select();" readonly>
