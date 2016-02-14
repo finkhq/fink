@@ -1,5 +1,5 @@
 module.exports = {
   database: {
-    connector: require('levelup')
+    path: '/var/lib/dokku/services/leveldb/fink.db'
   }
 }
