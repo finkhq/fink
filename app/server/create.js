@@ -8,19 +8,18 @@ const app = express()
 
 // middlewares
 const morgan = require('morgan')
-const cors = require('cors')
 const compress = require('compression')
 const helmet = require('helmet')
 const jsendp = require('jsendp')
 const bodyParser = require('body-parser')
 const favicon = require('serve-favicon')
 
-// app.use(favicon(__dirname + '/public/favicon.ico'))
+app.use(favicon(process.cwd() + '/app/public/assets/images/favicon/favicon.ico'))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(helmet())
 app.use(compress())
-app.use(cors())
+
 app.use(jsendp())
 
 module.exports = function (cb) {

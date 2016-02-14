@@ -5,6 +5,7 @@ const numeral = require('numeral')
 const isURI = require('fink-is-uri')
 const config = require('config')
 const URI = require('fink-level')(config.database)
+const cors = require('cors')
 
 const riot = require('riot')
 const stats = require('app/client/tag/stats')
@@ -19,6 +20,10 @@ function relativeURI (relative) {
 }
 
 module.exports = function (app) {
+  const corsOptions = {
+    origin: app.locals.url_canonical
+  }
+
   app.get('/', function (req, res) {
     return res.render('home', {
       content: riot.render(shorten),
@@ -72,7 +77,7 @@ module.exports = function (app) {
     return redirect()
   })
 
-  app.post('/', function (req, res) {
+  app.post('/', cors(corsOptions), function (req, res) {
     const uri = req.body.uri
     if (!uri) return res.fail(403, 'should to provide an URI to be shortened.')
 
