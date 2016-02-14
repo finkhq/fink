@@ -2,13 +2,12 @@
 <html lang="en">
   <head>
     <title>Fink | {{#if title}} {{title}} {{else}} URL Shortener for Masses. {{/if}}</title>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    {{!-- TODO: Add twitter card meta --}}
-    {{!-- TODO: Add facebook meta --}}
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="referrer" content="always"/>
+    <meta name="keywords" content="shorten, uri, url, share, emoji"/>
+    <meta name="description" content="Get the most shorten unique URL for whatever URI. Also supports emojis to be more social friendly!"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-touch-icon-60x60.png">
@@ -39,11 +38,11 @@
     {{{body}}}
 
     <footer class="center">
-      <a href="" title="What?">About</a>
-      <a href="" title="What?">Contact</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
 
       {{#unless isHome}}
-        <a href="" title="What?">🐀</a>
+        <a href="/" rel="nofollow">🐀</a>
       {{/unless}}
     </footer>
 
