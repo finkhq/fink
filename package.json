@@ -72,7 +72,8 @@
     "clean": "rm -rf node_modules",
     "lint": "standard app",
     "pretest": "npm run lint",
-    "server": "NODE_PATH=./ DEBUG=fink-www node index.js",
+    "server": "NODE_ENV=development NODE_PATH=./ DEBUG=fink-www node index.js",
+    "start": "NODE_ENV=production NODE_PATH=./ DEBUG=fink-www node index.js",
     "test": "echo 'no test (yet)'"
   },
   "license": "MIT"
