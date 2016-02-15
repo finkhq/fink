@@ -5,7 +5,9 @@ const numeral = require('numeral')
 const isURI = require('fink-is-uri')
 const config = require('config')
 const URI = require('fink-level')(config.database)
+
 const cors = require('cors')
+const corsOptions = { origin: config.url }
 
 const riot = require('riot')
 const stats = require('app/client/tag/stats')
@@ -20,10 +22,6 @@ function relativeURI (relative) {
 }
 
 module.exports = function (app) {
-  const corsOptions = {
-    origin: app.locals.url_canonical
-  }
-
   app.get('/', function (req, res) {
     return res.render('home', {
       content: riot.render(shorten),
