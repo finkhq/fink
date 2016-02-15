@@ -25,8 +25,8 @@
 
   <script>
     this.hits = opts.hits
-    this.hash = opts.hash
-    this.hashEmoji = opts.hashEmoji
+    this.hash = Fink.endpoint + '/' + opts.hash
+    this.hashEmoji = Fink.endpoint + '/' + opts.hashEmoji
     this.isFetched = true
   </script>
 </stats>
