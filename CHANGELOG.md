@@ -1,3 +1,28 @@
+<a name="0.3.0"></a>
+# 0.3.0 (2016-02-15)
+
+
+* Add favicon ([07d6e81](https://github.com/finkhq/fink-www/commit/07d6e81))
+* Add normalize ([84dd8cc](https://github.com/finkhq/fink-www/commit/84dd8cc))
+* Add production bootstrapping ([66bdfb1](https://github.com/finkhq/fink-www/commit/66bdfb1))
+* Add stats view ([0ca3ae4](https://github.com/finkhq/fink-www/commit/0ca3ae4))
+* Fix footer ([14ac0a5](https://github.com/finkhq/fink-www/commit/14ac0a5))
+* Fix typo ([3e2eb2d](https://github.com/finkhq/fink-www/commit/3e2eb2d))
+* Improve CSS ([5e8ac7c](https://github.com/finkhq/fink-www/commit/5e8ac7c))
+* Setup correctly morgan ([caffad6](https://github.com/finkhq/fink-www/commit/caffad6))
+* Setup CORS and favicon middleware ([363634d](https://github.com/finkhq/fink-www/commit/363634d))
+* Setup default title ([e821f22](https://github.com/finkhq/fink-www/commit/e821f22))
+* Setup footer ([f0495ff](https://github.com/finkhq/fink-www/commit/f0495ff))
+* Setup production database path ([07dbb42](https://github.com/finkhq/fink-www/commit/07dbb42))
+* Setup robots ([9308d0e](https://github.com/finkhq/fink-www/commit/9308d0e))
+* Update ([38b77ae](https://github.com/finkhq/fink-www/commit/38b77ae))
+* update dependencies ([1c87aef](https://github.com/finkhq/fink-www/commit/1c87aef))
+* Update setup url ([bf82858](https://github.com/finkhq/fink-www/commit/bf82858))
+* Update tags ([8d787a0](https://github.com/finkhq/fink-www/commit/8d787a0))
+* yep ([f85c61e](https://github.com/finkhq/fink-www/commit/f85c61e))
+
+
+
 <a name="0.2.0"></a>
 # 0.2.0 (2016-02-11)
 
@@ -10,6 +35,7 @@
 * Fix typo ([9c6d73c](https://github.com/finkhq/fink-www/commit/9c6d73c))
 * Merge fink-api in the same project ([84256d2](https://github.com/finkhq/fink-www/commit/84256d2))
 * More simple ([fcd17b3](https://github.com/finkhq/fink-www/commit/fcd17b3))
+* Release 0.2.0 ([d119461](https://github.com/finkhq/fink-www/commit/d119461))
 * Remove fixture values ([80c0ada](https://github.com/finkhq/fink-www/commit/80c0ada))
 * update ([4b911cd](https://github.com/finkhq/fink-www/commit/4b911cd))
 * update dep ([bf2f117](https://github.com/finkhq/fink-www/commit/bf2f117))
