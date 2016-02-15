@@ -54,9 +54,13 @@ module.exports = function (app) {
         if (!isRegister) return res.fail(404)
         instance = getValue(instance)
 
+        function getURI (path) {
+          return `${config.server.url}/${path}`
+        }
+
         var opts = {
-          hash: instance.hash,
-          hashEmoji: instance.hashEmoji,
+          hash: getURI(instance.hash),
+          hashEmoji: getURI(instance.hashEmoji),
           hits: numeral(instance.hits).format('0,0')
         }
 
