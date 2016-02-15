@@ -17,8 +17,8 @@ function getValue (instance) {
   return JSON.parse(lodash.get(lodash.first(instance), 'value'))
 }
 
-function relativeURI (relative) {
-  return `${config.server.protocol}://${config.server.host}/${relative}`
+function getURI (relative) {
+  return `${config.url}/${relative}`
 }
 
 module.exports = function (app) {
@@ -59,8 +59,8 @@ module.exports = function (app) {
         instance = getValue(instance)
 
         var opts = {
-          hash: relativeURI(instance.hash),
-          hashEmoji: relativeURI(instance.hashEmoji),
+          hash: getURI(instance.hash),
+          hashEmoji: getURI(instance.hashEmoji),
           hits: numeral(instance.hits).format('0,0')
         }
 
