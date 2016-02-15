@@ -29,7 +29,6 @@ module.exports = function (cb) {
   require('./routes')(app)
 
   app.locals.isProduction = isProduction
-  app.locals.url_canonical = config.url
   app.locals.FINK_VERSION = pkg.version
 
   app.disable('x-powered-by')
