@@ -27,6 +27,7 @@
     this.hits = opts.hits
     this.hash = opts.hash
     this.hashEmoji = opts.hashEmoji
+    new Clipboard('.copy-button')
     this.isFetched = true
   </script>
 </stats>
