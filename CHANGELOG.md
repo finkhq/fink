@@ -1,3 +1,11 @@
+<a name="0.3.1"></a>
+## 0.3.1 (2016-02-15)
+
+
+* Add missing dependency ([e9b3ff7](https://github.com/finkhq/fink-www/commit/e9b3ff7))
+
+
+
 <a name="0.3.0"></a>
 # 0.3.0 (2016-02-15)
 
@@ -9,6 +17,7 @@
 * Fix footer ([14ac0a5](https://github.com/finkhq/fink-www/commit/14ac0a5))
 * Fix typo ([3e2eb2d](https://github.com/finkhq/fink-www/commit/3e2eb2d))
 * Improve CSS ([5e8ac7c](https://github.com/finkhq/fink-www/commit/5e8ac7c))
+* Release 0.3.0 ([4767761](https://github.com/finkhq/fink-www/commit/4767761))
 * Setup correctly morgan ([caffad6](https://github.com/finkhq/fink-www/commit/caffad6))
 * Setup CORS and favicon middleware ([363634d](https://github.com/finkhq/fink-www/commit/363634d))
 * Setup default title ([e821f22](https://github.com/finkhq/fink-www/commit/e821f22))
