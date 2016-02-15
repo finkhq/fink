@@ -1,7 +1,7 @@
 module.exports = {
   server: {
-    protocol: 'http',
-    host: 'localhost',
+    url: 'http://127.0.0.1:3000',
+    host: '127.0.0.1',
     port: 3000,
     portDev: 4000
   },

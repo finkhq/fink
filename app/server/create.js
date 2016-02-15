@@ -24,18 +24,17 @@ app.use(jsendp())
 
 module.exports = function (cb) {
   const isProduction = process.env.NODE_ENV === 'production'
-  const url_canonical = `${config.protocol}://${config.host}:${config.port}`
 
   require('./views')(app, express)
   require('./routes')(app)
 
   app.locals.isProduction = isProduction
-  app.locals.url_canonical = url_canonical
+  app.locals.url_canonical = config.url
   app.locals.FINK_VERSION = pkg.version
 
   app.disable('x-powered-by')
 
   app.listen(config.port, function () {
-    return cb(url_canonical)
+    return cb(config.url)
   })
 }
