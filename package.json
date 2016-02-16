@@ -32,7 +32,7 @@
     "exists-file": "~1.0.0",
     "express": "~4.13.4",
     "express-hbs": "~0.8.4",
-    "fink-is-uri": "~1.0.1",
+    "fink-is-uri": "~1.0.2",
     "fink-level": "~1.1.0",
     "helmet": "~1.1.0",
     "jsendp": "~1.2.0",
