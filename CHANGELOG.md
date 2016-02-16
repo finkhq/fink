@@ -1,8 +1,31 @@
+<a name="0.3.2"></a>
+## 0.3.2 (2016-02-16)
+
+
+### chore
+
+* chore(package): update lodash to version 4.4.0 ([8fee711](https://github.com/finkhq/fink-www/commit/8fee711))
+
+* Add config base on machine env with fallback ([a5a400a](https://github.com/finkhq/fink-www/commit/a5a400a))
+* Add mail ([161a346](https://github.com/finkhq/fink-www/commit/161a346))
+* Fix config values ([512b533](https://github.com/finkhq/fink-www/commit/512b533))
+* Fix copy clipboard on stats ([89200fd](https://github.com/finkhq/fink-www/commit/89200fd))
+* Merge pull request #5 from finkhq/greenkeeper-lodash-4.4.0 ([388a163](https://github.com/finkhq/fink-www/commit/388a163))
+* More simple endpoint ([5765e1a](https://github.com/finkhq/fink-www/commit/5765e1a))
+* not really ¯\_(ツ)_/¯ ([df8a6ed](https://github.com/finkhq/fink-www/commit/df8a6ed))
+* relativeURI → getURI ([f23fc08](https://github.com/finkhq/fink-www/commit/f23fc08))
+* Resolve URI in front ([78d8e95](https://github.com/finkhq/fink-www/commit/78d8e95))
+* Update cors ([099ccce](https://github.com/finkhq/fink-www/commit/099ccce))
+* Update dep ([c1352de](https://github.com/finkhq/fink-www/commit/c1352de))
+
+
+
 <a name="0.3.1"></a>
 ## 0.3.1 (2016-02-15)
 
 
 * Add missing dependency ([e9b3ff7](https://github.com/finkhq/fink-www/commit/e9b3ff7))
+* Release 0.3.1 ([9a67d9d](https://github.com/finkhq/fink-www/commit/9a67d9d))
 
 
 
