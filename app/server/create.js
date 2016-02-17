@@ -29,6 +29,7 @@ module.exports = function (cb) {
   require('./routes')(app)
 
   app.locals.FINK_URL = config.url
+  app.locals.FINK_HOST = config.host
   app.locals.FINK_VERSION = pkg.version
   app.locals.isProduction = isProduction
 

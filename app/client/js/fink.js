@@ -2,7 +2,7 @@
 
 ;(function (Fink, fetch, _isURI) {
   Fink.isURI = function (uri) {
-    return _isURI(uri, window.location.hostname)
+    return _isURI(uri, Fink.host)
   }
 
   Fink.path = function (relative) {
