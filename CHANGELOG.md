@@ -1,8 +1,15 @@
+<a name="0.5.3"></a>
+## 0.5.3 (2016-02-17)
+
+
+
+
 <a name="0.5.2"></a>
 ## 0.5.2 (2016-02-17)
 
 
 * fix typo ([2982f5f](https://github.com/finkhq/fink-www/commit/2982f5f))
+* Release 0.5.2 ([a99670f](https://github.com/finkhq/fink-www/commit/a99670f))
 * upgrade dep ([800963c](https://github.com/finkhq/fink-www/commit/800963c))
 
 
