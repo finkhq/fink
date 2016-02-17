@@ -1,8 +1,18 @@
+<a name="0.5.2"></a>
+## 0.5.2 (2016-02-17)
+
+
+* fix typo ([2982f5f](https://github.com/finkhq/fink-www/commit/2982f5f))
+* upgrade dep ([800963c](https://github.com/finkhq/fink-www/commit/800963c))
+
+
+
 <a name="0.5.1"></a>
 ## 0.5.1 (2016-02-17)
 
 
 * Merge pull request #8 from finkhq/greenkeeper-lodash-4.5.0 ([2fc7dce](https://github.com/finkhq/fink-www/commit/2fc7dce))
+* Release 0.5.1 ([9202d90](https://github.com/finkhq/fink-www/commit/9202d90))
 
 
 
