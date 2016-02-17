@@ -1,6 +1,6 @@
 'use strict'
 
-const config = require('config').server
+const config = require('config')
 const pkg = require('../../package.json')
 
 const express = require('express')
@@ -28,14 +28,16 @@ module.exports = function (cb) {
   require('./views')(app, express)
   require('./routes')(app)
 
-  app.locals.FINK_URL = config.url
-  app.locals.FINK_HOST = config.host
+  app.locals.FINK_URL = config.server.url
+  app.locals.FINK_HOST = config.server.host
   app.locals.FINK_VERSION = pkg.version
   app.locals.isProduction = isProduction
 
+  if (isProduction) app.locals.GA_ID = config.client.GA_ID
+
   app.disable('x-powered-by')
 
-  app.listen(config.port, function () {
-    return cb(config.url)
+  app.listen(config.server.port, function () {
+    return cb(config.server.url)
   })
 }

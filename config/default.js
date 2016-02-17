@@ -8,6 +8,10 @@ module.exports = {
     portDev: 4000
   },
 
+  client: {
+    GA_ID: process.env.GA_ID
+  },
+
   database: {
     connector: require('level'),
     path: process.env.STORAGE_DIR || path.resolve('storage'),
