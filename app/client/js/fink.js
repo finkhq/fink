@@ -5,8 +5,8 @@
     return _isURI(uri, Fink.host)
   }
 
-  Fink.path = function (relative) {
-    return window.location.href + relative
+  Fink.route = function (relative) {
+    return Fink.endpoint + '/' + relative
   }
 
   Fink.register = function (uri) {

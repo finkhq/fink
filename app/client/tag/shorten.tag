@@ -38,8 +38,8 @@
     }
 
     this.resolveURI = function(hash, hashEmoji) {
-      this.hash = Fink.path(hash)
-      this.hashEmoji = Fink.path(hashEmoji)
+      this.hash = Fink.route(hash)
+      this.hashEmoji = Fink.route(hashEmoji)
       this.isFetched = true
       this.update()
     }
