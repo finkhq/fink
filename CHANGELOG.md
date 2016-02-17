@@ -1,6 +1,17 @@
+<a name="0.5.0"></a>
+# 0.5.0 (2016-02-17)
+
+
+* Dont inject url variables ([7a11e6c](https://github.com/finkhq/fink-www/commit/7a11e6c))
+* Setup Google Analytics integration ([59aa736](https://github.com/finkhq/fink-www/commit/59aa736))
+
+
+
 <a name="0.4.1"></a>
 ## 0.4.1 (2016-02-17)
 
+
+* Release 0.4.1 ([8ca3641](https://github.com/finkhq/fink-www/commit/8ca3641))
 
 
 
