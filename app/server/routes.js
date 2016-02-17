@@ -16,6 +16,10 @@ function getValue (instance) {
   return JSON.parse(lodash.get(lodash.first(instance), 'value'))
 }
 
+function getURI (path) {
+  return `${config.server.url}/${path}`
+}
+
 module.exports = function (app) {
   app.get('/', function (req, res) {
     return res.render('home', {
@@ -52,10 +56,6 @@ module.exports = function (app) {
         if (err) return res.error(err)
         if (!isRegister) return res.fail(404)
         instance = getValue(instance)
-
-        function getURI (path) {
-          return `${config.server.url}/${path}`
-        }
 
         return res.render('stats', {
           hash: getURI(instance.hash),
