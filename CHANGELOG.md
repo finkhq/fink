@@ -1,8 +1,17 @@
+<a name="0.5.1"></a>
+## 0.5.1 (2016-02-17)
+
+
+* Merge pull request #8 from finkhq/greenkeeper-lodash-4.5.0 ([2fc7dce](https://github.com/finkhq/fink-www/commit/2fc7dce))
+
+
+
 <a name="0.5.0"></a>
 # 0.5.0 (2016-02-17)
 
 
 * Dont inject url variables ([7a11e6c](https://github.com/finkhq/fink-www/commit/7a11e6c))
+* Release 0.5.0 ([00ce02a](https://github.com/finkhq/fink-www/commit/00ce02a))
 * Setup Google Analytics integration ([59aa736](https://github.com/finkhq/fink-www/commit/59aa736))
 
 
@@ -18,6 +27,10 @@
 <a name="0.4.0"></a>
 # 0.4.0 (2016-02-17)
 
+
+### chore
+
+* chore(package): update lodash to version 4.5.0 ([d4a1563](https://github.com/finkhq/fink-www/commit/d4a1563))
 
 * Fix emoji route in shorten view ([9bc4d41](https://github.com/finkhq/fink-www/commit/9bc4d41))
 * host as parameter ([2e8771f](https://github.com/finkhq/fink-www/commit/2e8771f))
