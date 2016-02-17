@@ -2,7 +2,7 @@
   "name": "fink-www",
   "description": "Frontend application for interact with fink API.",
   "homepage": "https://github.com/finkhq/fink-www",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "main": "./index.js",
   "author": {
     "name": "fink",

@@ -1,3 +1,14 @@
+<a name="0.4.0"></a>
+# 0.4.0 (2016-02-17)
+
+
+* Fix emoji route in shorten view ([9bc4d41](https://github.com/finkhq/fink-www/commit/9bc4d41))
+* host as parameter ([2e8771f](https://github.com/finkhq/fink-www/commit/2e8771f))
+* Inject URL to support emojis ([07cda2c](https://github.com/finkhq/fink-www/commit/07cda2c))
+* Inject URL variables ([cf0beb4](https://github.com/finkhq/fink-www/commit/cf0beb4))
+
+
+
 <a name="0.3.3"></a>
 ## 0.3.3 (2016-02-17)
 
@@ -5,6 +16,7 @@
 * first commit ([9830864](https://github.com/finkhq/fink-www/commit/9830864))
 * Fix #6 ([b61c176](https://github.com/finkhq/fink-www/commit/b61c176)), closes [#6](https://github.com/finkhq/fink-www/issues/6)
 * move out ([43ac8e2](https://github.com/finkhq/fink-www/commit/43ac8e2))
+* Release 0.3.3 ([64f8588](https://github.com/finkhq/fink-www/commit/64f8588))
 * Setup correctly storage path ([5a417de](https://github.com/finkhq/fink-www/commit/5a417de))
 
 
