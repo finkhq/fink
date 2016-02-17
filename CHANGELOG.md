@@ -1,3 +1,14 @@
+<a name="0.3.3"></a>
+## 0.3.3 (2016-02-17)
+
+
+* first commit ([9830864](https://github.com/finkhq/fink-www/commit/9830864))
+* Fix #6 ([b61c176](https://github.com/finkhq/fink-www/commit/b61c176)), closes [#6](https://github.com/finkhq/fink-www/issues/6)
+* move out ([43ac8e2](https://github.com/finkhq/fink-www/commit/43ac8e2))
+* Setup correctly storage path ([5a417de](https://github.com/finkhq/fink-www/commit/5a417de))
+
+
+
 <a name="0.3.2"></a>
 ## 0.3.2 (2016-02-16)
 
@@ -14,6 +25,7 @@
 * More simple endpoint ([5765e1a](https://github.com/finkhq/fink-www/commit/5765e1a))
 * not really ¯\_(ツ)_/¯ ([df8a6ed](https://github.com/finkhq/fink-www/commit/df8a6ed))
 * relativeURI → getURI ([f23fc08](https://github.com/finkhq/fink-www/commit/f23fc08))
+* Release 0.3.2 ([3ca2451](https://github.com/finkhq/fink-www/commit/3ca2451))
 * Resolve URI in front ([78d8e95](https://github.com/finkhq/fink-www/commit/78d8e95))
 * Update cors ([099ccce](https://github.com/finkhq/fink-www/commit/099ccce))
 * Update dep ([c1352de](https://github.com/finkhq/fink-www/commit/c1352de))
