@@ -10,7 +10,6 @@ const cors = require('cors')
 const corsOptions = { origin: config.url }
 
 const riot = require('riot')
-const stats = require('app/client/tag/stats')
 const shorten = require('app/client/tag/shorten')
 
 function getValue (instance) {
@@ -58,14 +57,10 @@ module.exports = function (app) {
           return `${config.server.url}/${path}`
         }
 
-        var opts = {
+        return res.render('stats', {
           hash: getURI(instance.hash),
           hashEmoji: getURI(instance.hashEmoji),
-          hits: numeral(instance.hits).format('0,0')
-        }
-
-        return res.render('stats', {
-          content: riot.render(stats, opts),
+          hits: numeral(instance.hits).format('0,0'),
           isAbsolute: true
         })
       })

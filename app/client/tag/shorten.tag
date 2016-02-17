@@ -38,7 +38,6 @@
     }
 
     this.resolveURI = function(hash, hashEmoji) {
-      new Clipboard('.copy-button')
       this.hash = Fink.path(hash)
       this.hashEmoji = Fink.path(hashEmoji)
       this.isFetched = true
