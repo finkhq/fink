@@ -10,7 +10,7 @@ module.exports = {
 
   database: {
     connector: require('level'),
-    path: process.env.STORAGE_DIR || path.join(__dirname, 'storage'),
+    path: process.env.STORAGE_DIR || path.resolve('storage'),
     counter: '__id'
   }
 }
