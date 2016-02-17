@@ -28,8 +28,9 @@ module.exports = function (cb) {
   require('./views')(app, express)
   require('./routes')(app)
 
-  app.locals.isProduction = isProduction
+  app.locals.FINK_URL = config.url
   app.locals.FINK_VERSION = pkg.version
+  app.locals.isProduction = isProduction
 
   app.disable('x-powered-by')
 
