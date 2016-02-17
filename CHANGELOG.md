@@ -1,3 +1,9 @@
+<a name="0.4.1"></a>
+## 0.4.1 (2016-02-17)
+
+
+
+
 <a name="0.4.0"></a>
 # 0.4.0 (2016-02-17)
 
@@ -6,6 +12,7 @@
 * host as parameter ([2e8771f](https://github.com/finkhq/fink-www/commit/2e8771f))
 * Inject URL to support emojis ([07cda2c](https://github.com/finkhq/fink-www/commit/07cda2c))
 * Inject URL variables ([cf0beb4](https://github.com/finkhq/fink-www/commit/cf0beb4))
+* Release 0.4.0 ([9bb3e09](https://github.com/finkhq/fink-www/commit/9bb3e09))
 
 
 
