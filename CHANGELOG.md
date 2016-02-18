@@ -1,6 +1,14 @@
+<a name="0.6.2"></a>
+## 0.6.2 (2016-02-18)
+
+
+
+
 <a name="0.6.1"></a>
 ## 0.6.1 (2016-02-18)
 
+
+* Release 0.6.1 ([1f1db7e](https://github.com/finkhq/fink-www/commit/1f1db7e))
 
 
 
