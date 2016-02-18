@@ -1,6 +1,16 @@
+<a name="0.7.0"></a>
+# 0.7.0 (2016-02-18)
+
+
+* Remove unnecessary code ([46b3a85](https://github.com/finkhq/fink-www/commit/46b3a85))
+
+
+
 <a name="0.6.2"></a>
 ## 0.6.2 (2016-02-18)
 
+
+* Release 0.6.2 ([952378b](https://github.com/finkhq/fink-www/commit/952378b))
 
 
 
