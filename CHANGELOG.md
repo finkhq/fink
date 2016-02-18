@@ -1,6 +1,17 @@
+<a name="0.6.0"></a>
+# 0.6.0 (2016-02-18)
+
+
+* fix bundle ([822afec](https://github.com/finkhq/fink-www/commit/822afec))
+* Merge and use minimal dependencies ([deb1cd0](https://github.com/finkhq/fink-www/commit/deb1cd0))
+
+
+
 <a name="0.5.3"></a>
 ## 0.5.3 (2016-02-17)
 
+
+* Release 0.5.3 ([791e825](https://github.com/finkhq/fink-www/commit/791e825))
 
 
 
