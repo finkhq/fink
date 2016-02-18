@@ -1,27 +1,22 @@
 'use strict'
 
-;(function (Fink, fetch, _isURI) {
+;(function (Fink, superagent) {
   Fink.isURI = function (uri) {
-    return _isURI(uri, Fink.host)
+    return require('fink-is-uri')(uri, Fink.host)
   }
 
   Fink.route = function (relative) {
     return Fink.endpoint + '/' + relative
   }
 
-  Fink.register = function (uri) {
-    return fetch(Fink.endpoint, {
-      method: 'post',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        uri: uri
+  Fink.register = function (uri, cb) {
+    return window.superagent.post(Fink.endpoint)
+      .set('Accept', 'application/json')
+      .set('Content-Type', 'application/json')
+      .send({ uri: uri })
+      .end(function (err, res) {
+        return cb(res.body.data)
       })
-    }).then(function (response) {
-      return response.json()
-    })
   }
 
   Fink.buzz = function () {
@@ -31,4 +26,4 @@
       elem.classList.remove('toggleBuzz')
     }, 750)
   }
-})(window.Fink, window.fetch, require('fink-is-uri')); // eslint-disable-line
+})(window.Fink); // eslint-disable-line

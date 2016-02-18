@@ -37,9 +37,9 @@
       this.uri = e.target.value
     }
 
-    this.resolveURI = function(hash, hashEmoji) {
-      this.hash = Fink.route(hash)
-      this.hashEmoji = Fink.route(hashEmoji)
+    this.resolveURI = function(json) {
+      this.hash = Fink.route(json.hash)
+      this.hashEmoji = Fink.route(json.hashEmoji)
       this.isFetched = true
       this.update()
     }
@@ -52,9 +52,8 @@
       this.spinner.classList.remove('hide')
       this.spinner.classList.add('show')
 
-      Fink.register(this.uri)
-      .then(function(json) {
-        _this.resolveURI(json.data.hash, json.data.hashEmoji)
+      Fink.register(this.uri, function(json) {
+        return _this.resolveURI(json)
       })
     }
 

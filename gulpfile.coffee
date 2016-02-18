@@ -38,10 +38,11 @@ src =
   js       :
     main   : 'app/client/js/fink.js'
     tag    : 'app/client/tag/**/**'
-    vendor : ['node_modules/fink-is-uri/dist/fink-is-uri.js'
-              'bower_components/es6-promise/promise.min.js'
-              'bower_components/fetch/fetch.js'
+    vendor : ['node_modules/riot/riot.min.js',
+              'app/client/js/superagent.js',
+              'node_modules/fink-is-uri/dist/fink-is-uri.js',
               'bower_components/clipboard/dist/clipboard.min.js']
+
   css      :
     main   : 'assets/css/' + dist.name + '.css'
     vendor : ['bower_components/normalize-css/normalize.css'
