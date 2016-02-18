@@ -11,8 +11,6 @@
 
   Fink.register = function (uri, cb) {
     return window.superagent.post(Fink.endpoint)
-      .set('Accept', 'application/json')
-      .set('Content-Type', 'application/json')
       .send({ uri: uri })
       .end(function (err, res) {
         return cb(res.body.data)
