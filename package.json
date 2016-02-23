@@ -59,7 +59,7 @@
     "gulp-sass": "~2.2.0",
     "gulp-shorthand": "~1.1.0",
     "gulp-strip-css-comments": "~1.2.0",
-    "gulp-uglify": "~1.5.2",
+    "gulp-uglify": "~1.5.3",
     "gulp-util": "~3.0.7",
     "level-mem": "~0.18.0",
     "mocha": "latest",
