@@ -1,3 +1,41 @@
+<a name="0.7.1"></a>
+## 0.7.1 (2016-04-21)
+
+* Add missing config dependency ([b7e8d71](https://github.com/finkhq/fink-www/commit/b7e8d71))
+* Update package.json ([befbd47](https://github.com/finkhq/fink-www/commit/befbd47))
+* chore(package): update browser-sync to version 2.11.2 ([4a70b12](https://github.com/finkhq/fink-www/commit/4a70b12))
+* chore(package): update browser-sync to version 2.12.0 ([ad6ce45](https://github.com/finkhq/fink-www/commit/ad6ce45))
+* chore(package): update browser-sync to version 2.12.2 ([b7ad79f](https://github.com/finkhq/fink-www/commit/b7ad79f))
+* chore(package): update browser-sync to version 2.12.3 ([82074ef](https://github.com/finkhq/fink-www/commit/82074ef))
+* chore(package): update existential-default to version 1.1.3 ([8257a0c](https://github.com/finkhq/fink-www/commit/8257a0c))
+* chore(package): update exists-file to version 1.0.1 ([4524984](https://github.com/finkhq/fink-www/commit/4524984))
+* chore(package): update express-hbs to version 1.0.0 ([e8d1f81](https://github.com/finkhq/fink-www/commit/e8d1f81))
+* chore(package): update gulp-coffee to version 2.3.2 ([de51262](https://github.com/finkhq/fink-www/commit/de51262))
+* chore(package): update gulp-riot to version 0.4.6 ([3f1ddd4](https://github.com/finkhq/fink-www/commit/3f1ddd4))
+* chore(package): update gulp-riot to version 0.4.7 ([93fd8eb](https://github.com/finkhq/fink-www/commit/93fd8eb))
+* chore(package): update gulp-riot to version 0.4.8 ([994a552](https://github.com/finkhq/fink-www/commit/994a552))
+* chore(package): update gulp-riot to version 0.4.9 ([6b4ff84](https://github.com/finkhq/fink-www/commit/6b4ff84))
+* chore(package): update gulp-sass to version 2.3.0 ([6e3db36](https://github.com/finkhq/fink-www/commit/6e3db36))
+* chore(package): update gulp-uglify to version 1.5.3 ([dd805d7](https://github.com/finkhq/fink-www/commit/dd805d7))
+* chore(package): update helmet to version 1.2.0 ([0657261](https://github.com/finkhq/fink-www/commit/0657261))
+* chore(package): update helmet to version 1.3.0 ([073f7e8](https://github.com/finkhq/fink-www/commit/073f7e8))
+* chore(package): update lodash to version 4.10.0 ([3d7eb0f](https://github.com/finkhq/fink-www/commit/3d7eb0f))
+* chore(package): update lodash to version 4.11.0 ([c084648](https://github.com/finkhq/fink-www/commit/c084648))
+* chore(package): update lodash to version 4.11.1 ([11ffd0d](https://github.com/finkhq/fink-www/commit/11ffd0d))
+* chore(package): update lodash to version 4.5.1 ([28d6ac1](https://github.com/finkhq/fink-www/commit/28d6ac1))
+* chore(package): update lodash to version 4.6.0 ([1319da0](https://github.com/finkhq/fink-www/commit/1319da0))
+* chore(package): update lodash to version 4.6.1 ([6ce2a0d](https://github.com/finkhq/fink-www/commit/6ce2a0d))
+* chore(package): update lodash to version 4.7.0 ([d148327](https://github.com/finkhq/fink-www/commit/d148327))
+* chore(package): update lodash to version 4.8.1 ([5d0a492](https://github.com/finkhq/fink-www/commit/5d0a492))
+* chore(package): update lodash to version 4.8.2 ([02d46bb](https://github.com/finkhq/fink-www/commit/02d46bb))
+* chore(package): update lodash to version 4.9.0 ([fe8d004](https://github.com/finkhq/fink-www/commit/fe8d004))
+* chore(package): update morgan to version 1.7.0 ([af8f40d](https://github.com/finkhq/fink-www/commit/af8f40d))
+* chore(package): update riot to version 2.3.16 ([9b023e4](https://github.com/finkhq/fink-www/commit/9b023e4))
+* chore(package): update riot to version 2.3.17 ([d611bf6](https://github.com/finkhq/fink-www/commit/d611bf6))
+* chore(package): update riot to version 2.3.18 ([0d8f40f](https://github.com/finkhq/fink-www/commit/0d8f40f))
+
+
+
 <a name="0.7.0"></a>
 # 0.7.0 (2016-02-18)
 
