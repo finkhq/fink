@@ -2,7 +2,7 @@
 
 const existsFile = require('exists-file')
 const path = require('path')
-const existsDefault = require('existential-default')
+const existsDefault = require('existential-default-deep')
 
 const defaultConfig = require('./default')
 
