@@ -55,7 +55,7 @@
     "gulp-coffee": "~2.3.2",
     "gulp-concat": "~2.6.0",
     "gulp-cssmin": "~0.1.7",
-    "gulp-header": "~1.7.1",
+    "gulp-header": "~1.8.1",
     "gulp-riot": "~0.4.9",
     "gulp-sass": "~2.3.1",
     "gulp-shorthand": "~1.1.0",
