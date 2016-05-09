@@ -41,7 +41,7 @@
     "lodash": "~4.11.2",
     "morgan": "~1.7.0",
     "numeral": "~1.5.3",
-    "riot": "~2.3.18",
+    "riot": "~2.4.0",
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
