@@ -64,7 +64,7 @@
     "gulp-util": "~3.0.7",
     "level-mem": "~0.18.0",
     "mocha": "latest",
-    "piping": "~0.3.1",
+    "piping": "~0.3.2",
     "should": "latest",
     "standard": "latest"
   },
