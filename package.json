@@ -27,7 +27,7 @@
     "body-parser": "~1.15.1",
     "compression": "~1.6.2",
     "config": "~1.21.0",
-    "cors": "~2.8.0",
+    "cors": "~2.8.1",
     "debug": "~2.2.0",
     "existential-default-deep": "~1.0.0",
     "exists-file": "~2.1.0",
