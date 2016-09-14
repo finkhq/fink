@@ -45,7 +45,7 @@
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
-    "browser-sync": "~2.15.0",
+    "browser-sync": "~2.16.0",
     "coffee-script": "~1.10.0",
     "git-dirty": "~1.0.1",
     "gulp": "~3.9.1",
