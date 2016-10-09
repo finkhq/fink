@@ -30,7 +30,7 @@
     "cors": "~2.8.1",
     "debug": "~2.2.0",
     "existential-default-deep": "~1.0.0",
-    "exists-file": "~2.1.0",
+    "exists-file": "~3.0.0",
     "express": "~4.14.0",
     "express-hbs": "~1.0.1",
     "fink-is-uri": "~1.0.2",
