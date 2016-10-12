@@ -22,7 +22,7 @@
     "🐀"
   ],
   "dependencies": {
-    "async": "~2.1.0",
+    "async": "~2.1.1",
     "base64-emoji": "~2.1.0",
     "body-parser": "~1.15.1",
     "compression": "~1.6.2",
