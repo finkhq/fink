@@ -26,7 +26,7 @@
     "base64-emoji": "~2.1.0",
     "body-parser": "~1.15.1",
     "compression": "~1.6.2",
-    "config": "~1.21.0",
+    "config": "~1.23.0",
     "cors": "~2.8.1",
     "debug": "~2.2.0",
     "existential-default-deep": "~1.0.0",
