@@ -28,7 +28,7 @@
     "compression": "~1.6.2",
     "config": "~1.23.0",
     "cors": "~2.8.1",
-    "debug": "~2.4.0",
+    "debug": "~2.5.0",
     "existential-default-deep": "~1.0.0",
     "exists-file": "~3.0.0",
     "express": "~4.14.0",
