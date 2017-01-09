@@ -57,7 +57,7 @@
     "gulp-cssmin": "~0.1.7",
     "gulp-header": "~1.8.2",
     "gulp-riot": "~1.0.0",
-    "gulp-sass": "~3.0.0",
+    "gulp-sass": "~3.1.0",
     "gulp-shorthand": "~1.1.0",
     "gulp-strip-css-comments": "~1.2.0",
     "gulp-uglify": "~2.0.0",
