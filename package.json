@@ -42,7 +42,7 @@
     "morgan": "~1.7.0",
     "numeral": "~2.0.0",
     "riot": "~3.0.0-alpha.13",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.4.1"
   },
   "devDependencies": {
     "browser-sync": "~2.18.0",
