@@ -1,6 +1,6 @@
 'use strict'
 
-;(function (Fink, superagent) {
+;(function (Fink, fetch) {
   Fink.isURI = function (uri) {
     return require('fink-is-uri')(uri, Fink.host)
   }
@@ -10,18 +10,21 @@
   }
 
   Fink.register = function (uri, cb) {
-    return window.superagent.post(Fink.endpoint)
-      .send({ uri: uri })
-      .end(function (err, res) {
-        return cb(res.body.data)
-      })
+    return fetch(Fink.endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ uri: uri })
+    })
   }
 
+  Fink.logo = document.querySelectorAll('.fink-logo')[0]
+
   Fink.buzz = function () {
-    var elem = document.getElementById('fink-logo')
-    elem.classList.add('toggleBuzz')
+    Fink.logo.classList.add('toggleBuzz')
     setTimeout(function () {
-      elem.classList.remove('toggleBuzz')
+      Fink.logo.classList.remove('toggleBuzz')
     }, 750)
   }
-})(window.Fink); // eslint-disable-line
+})(window.Fink, window.fetch)
