@@ -2,24 +2,25 @@
 
 # -- Dependencies --------------------------------------------------------------
 
-config      = require './config'
 gulp        = require 'gulp'
-gutil       = require 'gulp-util'
+gulpif      = require 'gulp-if'
 riot        = require 'gulp-riot'
 sass        = require 'gulp-sass'
 concat      = require 'gulp-concat'
-coffee      = require 'gulp-coffee'
-header      = require 'gulp-header'
 uglify      = require 'gulp-uglify'
 cssmin      = require 'gulp-cssmin'
 addsrc      = require 'gulp-add-src'
 changed     = require 'gulp-changed'
-shorthand   = require 'gulp-shorthand'
-pkg         = require './package.json'
+cssnano     = require 'gulp-cssnano'
 prefix      = require 'gulp-autoprefixer'
 strip       = require 'gulp-strip-css-comments'
 browserSync = require 'browser-sync'
 reload      = browserSync.reload
+
+isProduction = process.env.NODE_ENV is 'production'
+
+config = require './config'
+pkg    = require './package.json'
 
 # -- Files ---------------------------------------------------------------------
 
@@ -38,24 +39,11 @@ src =
   js       :
     main   : 'app/client/js/fink.js'
     tag    : 'app/client/tag/**/**'
-    vendor : ['node_modules/riot/riot.min.js',
-              'app/client/js/superagent.js',
-              'node_modules/fink-is-uri/dist/fink-is-uri.js',
-              'bower_components/clipboard/dist/clipboard.min.js']
+    vendor : ['node_modules/fink-is-uri/dist/fink-is-uri.js']
 
   css      :
     main   : 'assets/css/' + dist.name + '.css'
-    vendor : ['bower_components/normalize-css/normalize.css'
-              'bower_components/milligram/dist/milligram.min.css' ]
-
-banner = [ "/**"
-           " * <%= pkg.name %> - <%= pkg.description %>"
-           " * @version <%= pkg.version %>"
-           " * @link    <%= pkg.homepage %>"
-           " * @author  <%= pkg.author.name %> (<%= pkg.author.url %>)"
-           " * @license <%= pkg.license %>"
-           " */"
-           "" ].join("\n")
+    vendor : []
 
 # -- Tasks ---------------------------------------------------------------------
 
@@ -63,13 +51,11 @@ gulp.task 'css', ->
   gulp.src src.css.vendor
   .pipe changed dist.css
   .pipe addsrc src.sass.main
-  .pipe sass().on 'error', gutil.log
+  .pipe sass().on 'error', sass.logError
   .pipe concat '' + dist.name + '.css'
-  .pipe prefix()
-  .pipe strip all: true
-  .pipe shorthand()
-  .pipe cssmin()
-  .pipe header banner, pkg: pkg
+  .pipe gulpif(isProduction, prefix())
+  .pipe gulpif(isProduction, strip all: true)
+  .pipe gulpif(isProduction, cssnano())
   .pipe gulp.dest dist.css
   return
 
@@ -77,12 +63,9 @@ gulp.task 'js', ->
   gulp.src src.js.vendor
   .pipe addsrc src.js.tag
   .pipe addsrc src.js.main
-  .pipe riot({
-    compact: true
-  }).on 'error', gutil.log
+  .pipe riot compact: true
   .pipe concat '' + dist.name + '.js'
-  .pipe uglify().on 'error', gutil.log
-  .pipe header banner, pkg: pkg
+  .pipe gulpif(isProduction, uglify())
   .pipe gulp.dest dist.js
   return
 
