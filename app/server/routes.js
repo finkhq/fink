@@ -1,31 +1,35 @@
 'use strict'
 
-const lodash = require('lodash')
+const {first, get, last} = require('lodash')
 const numeral = require('numeral')
 const isURI = require('fink-is-uri')
-const config = require('config')
-const URI = require('fink-level')(config.database)
+
+const {database, server} = require('config')
+const {
+  isRegister,
+  incrementCounter,
+  register
+} = require('fink-level')(database)
 
 const cors = require('cors')
-const corsOptions = { origin: config.url }
+
+const corsOptions = { origin: server.url }
 
 const riot = require('riot')
 const shorten = require('app/client/tag/shorten')
 
-function getValue (instance) {
-  return JSON.parse(lodash.get(lodash.first(instance), 'value'))
+function getFirstValue (instance) {
+  return JSON.parse(get(first(instance), 'value'))
 }
 
 function getURI (path) {
-  return `${config.server.url}/${path}`
+  return `${server.url}/${path}`
 }
 
 module.exports = function (app) {
   app.get('/', function (req, res) {
     return res.render('home', {
-      content: riot.render(shorten),
-      isHome: true,
-      isAbsolute: true
+      content: riot.render(shorten)
     })
   })
 
@@ -37,12 +41,12 @@ module.exports = function (app) {
     let hash = req.params.hash
 
     function redirect () {
-      URI.isRegister(hash, function (err, isRegister, instance) {
+      isRegister(hash, function (err, isRegister, instance) {
         if (err) return res.error(err)
 
         if (isRegister) {
-          instance = getValue(instance)
-          URI.incrementCounter(instance)
+          instance = getFirstValue(instance)
+          incrementCounter(instance)
           return res.redirect(301, instance.uri)
         }
 
@@ -52,10 +56,10 @@ module.exports = function (app) {
 
     function info () {
       hash = hash.substring(0, hash.length - 1)
-      URI.isRegister(hash, function (err, isRegister, instance) {
+      isRegister(hash, function (err, isRegister, instance) {
         if (err) return res.error(err)
         if (!isRegister) return res.fail(404)
-        instance = getValue(instance)
+        instance = getFirstValue(instance)
 
         return res.render('stats', {
           hash: getURI(instance.hash),
@@ -66,7 +70,7 @@ module.exports = function (app) {
       })
     }
 
-    if (lodash.last(hash) === '+') return info()
+    if (last(hash) === '+') return info()
     return redirect()
   })
 
@@ -76,18 +80,19 @@ module.exports = function (app) {
 
     const hostname = req.hostname
 
-    if (!isURI(uri, hostname))
+    if (!isURI(uri, hostname)) {
       return res.fail(403, 'should to provide a valid URI to be shortened.')
+    }
 
-    URI.isRegister(uri, function (err, isRegister, instance) {
+    isRegister(uri, function (err, isRegister, instance) {
       if (err) return res.error(err)
 
       if (isRegister) {
-        instance = getValue(instance)
+        instance = getFirstValue(instance)
         return res.success(202, instance)
       }
 
-      URI.register(uri, function (err, instance) {
+      register(uri, function (err, instance) {
         if (err) return res.error(err)
         return res.success(instance)
       })

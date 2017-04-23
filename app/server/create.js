@@ -6,6 +6,8 @@ const pkg = require('../../package.json')
 const express = require('express')
 const app = express()
 
+const isProduction = process.env.NODE_ENV === 'production'
+
 // middlewares
 const morgan = require('morgan')
 const compress = require('compression')
@@ -19,12 +21,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(helmet())
 app.use(compress())
-app.use(morgan('combined'))
+app.use(morgan(isProduction ? 'combined' : 'dev'))
 app.use(jsendp())
 
 module.exports = function (cb) {
-  const isProduction = process.env.NODE_ENV === 'production'
-
   require('./views')(app, express)
   require('./routes')(app)
 
