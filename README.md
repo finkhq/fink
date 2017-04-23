@@ -24,7 +24,7 @@ The features of this project are:
 * Small minification as possible (Based on [Base58](https://github.com/finkhq/fink-shortener#fink-shortener)) encode.
 * Unique identifier per URI. Not possible store duplicates!
 * Total clicks associated with URI.
-* Redirection between protocols. (For example: HTTP → BiTtorrent)
+* Redirection between protocols. (For example: HTTP → BiTtorrent).
 * Emojify version of the URI 😁🤓😎.
 
 ## License
