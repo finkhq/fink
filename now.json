@@ -1,0 +1,7 @@
+{
+  "name": "fink",
+  "env": {
+    "NODE_ENV": "production",
+    "STORAGE_DIR": "/storage"
+  }
+}
