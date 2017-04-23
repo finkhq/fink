@@ -1,60 +1,42 @@
 <shorten>
-  <section id="shorten-search" class="container" hide="{isFetched}">
-    <form id="shorten-form" onsubmit={ send }>
-      <fieldset>
-        <input oninput={ edit } id="shorten-field" type="search" taborder="1" placeholder="Paste a link to shorten it" autofocus>
-        <button id="shorten-button" class="button-primary" taborder="2" onclick={ send }>
-          <span class=>Shorten</span>
-          <span id="spinner" class="hide"></span>
-        </button>
+  <section class="pa4-l pa3-m">
+    <form class="mw7 center br2-ns ba b--black-10" onsubmit={send}>
+      <fieldset class="cf bn ma0 pa0">
+        <div class="cf">
+          <input ref='searchbox' taborder="1" class="f6 f5-l input-reset bn fl black-80 bg-white pa3 lh-solid w-100 w-75-m w-80-l br2-ns br--left-ns" placeholder="Paste a link to shorten it" type="text" value="" oninput={edit} autofocus autosave name="s" required>
+          <button taborder="2" class="f6 f5-l button-reset fl pv3 tc bn bg-dark-pink dim white pointer w-100 w-25-m w-20-l br2-ns br--right-ns" type="submit" onclick={send}>
+            <span class="pr2">Shorten</span>
+            <span ref='spinner' class="dots"></span>
+          </button>
+        </div>
       </fieldset>
     </form>
   </section>
 
-  <section id="shorten-results" show="{isFetched}">
-    <div class="shorten-box container">
-      <label>URL Shorten</label>
-      <input value={hash} id="uri-hash" class="shorten-text" type="text" onClick="this.select();" readonly>
-      <button class="copy-button" data-clipboard-target="#uri-hash">
-        <img class="copy-clipboard" src="assets/images/clipboard.png" alt="Copy to clipboard">
-      </button>
-    </div>
-
-    <div class="shorten-box container">
-      <label>URL Shorten Emojify</label>
-      <input value={hashEmoji} id="uri-hash-emoji" class="shorten-text" type="text" onClick="this.select();"readonly>
-      <button class="copy-button" data-clipboard-target="#uri-hash-emoji">
-        <img class="copy-clipboard" src="assets/images/clipboard.png" alt="Copy to clipboard">
-      </button>
-    </div>
-  </section>
-
   <script>
-
-    this.isFetched = false
 
     edit(e) {
       this.uri = e.target.value
     }
 
     this.resolveURI = function(json) {
-      this.hash = Fink.route(json.hash)
-      this.hashEmoji = Fink.route(json.hashEmoji)
-      this.isFetched = true
-      this.update()
+      location.pathname = json.data.hash + '+'
     }
 
     send(e) {
-      if (!Fink.isURI(this.uri)) return Fink.buzz()
-      var _this = this
+      e.preventDefault()
 
-      this['shorten-button'].classList.add('in-action')
-      this.spinner.classList.remove('hide')
-      this.spinner.classList.add('show')
+      if (!Fink.isURI(this.uri)) {
+        this.refs.searchbox.value = ''
+        Fink.buzz()
+        return
+      }
 
-      Fink.register(this.uri, function(json) {
-        return _this.resolveURI(json)
-      })
+      this.refs.spinner.classList.toggle('loading')
+      Fink
+        .register(this.uri)
+        .then(function(response) { return response.json()})
+        .then(this.resolveURI.bind(this))
     }
 
   </script>

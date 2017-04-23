@@ -1,14 +1,21 @@
 {{!< default}}
 
-<main id="root" class="margin-top container center">
+<main class="vh-100 dt w-100">
+  <div class="dtc v-mid tc white pt5 ph3 ph4-l flex flex-column min-vh-100">
 
-  <header id="home-header">
-    <a rel="nofollow" href="/">
-      <img id="fink-logo" src="{{asset "images/logo.png"}}" alt="fink logo" class="buzz">
-    </a>
-    <h1>URL Shortener for Masses</h1>
-  </header>
+    <div style="flex: 1;">
+      <a rel="nofollow" href="javascript:;">
+        <img src="{{asset "images/logo.png"}}" alt="fink logo" class="fink-logo mb4 buzz">
+      </a>
+      <h1 class="mid-gray mv3 f1-ns f3 fw4">URL Shortener for Masses</h1> {{{content}}}
+    </div>
 
-  {{{content}}}
-
+    <footer class="pv4 ph3 ph5-m ph6-l mid-gray">
+      <div class="tc mt3">
+        <a href="/faq/" title="FAQ" class="f6 dib ph2 link mid-gray dim">FAQ</a>
+        <a href="mailto:josefrancisco.verdu@gmail.com?subject=Hello, I saw Fink!" title="Contact" class="f6 dib ph2 link mid-gray dim ">Contact</a>
+        <a href="/ " title="🐀" class="f6 dib ph2 link mid-gray dim ">🐀</a>
+      </div>
+    </footer>
+  </div>
 </main>

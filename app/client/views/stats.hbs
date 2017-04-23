@@ -1,26 +1,66 @@
 {{!< default}}
 
-<main id="root" class="margin-top container center">
-  <section id="stats-container" class="container">
-    <h3 id="stats-clicks">clicks</h3>
-    <h1 id="stats-counter">{{hits}}</h1>
-  </section>
+<main class="vh-100 dt w-100">
+  <div class="dtc v-mid tc white pt5 ph3 ph4-l flex flex-column min-vh-100">
 
-  <section id="shorten-results">
-    <div class="shorten-box container">
-      <label>URL Shorten</label>
-      <input value={{hash}} id="uri-hash" class="shorten-text" type="text" onClick="this.select();" readonly>
-      <button class="copy-button" data-clipboard-target="#uri-hash">
-        <img class="copy-clipboard" src="assets/images/clipboard.png" alt="Copy to clipboard">
-      </button>
-    </div>
+    <section class="cf w-100 pv3 f6 ph3 ph4-ns black" style="flex: 1;">
+      <div class="mw9 center ph3-ns">
 
-    <div class="shorten-box container">
-      <label>URL Shorten Emojify</label>
-      <input value={{hashEmoji}} id="uri-hash-emoji" class="shorten-text" type="text" onClick="this.select();"readonly>
-      <button class="copy-button" data-clipboard-target="#uri-hash-emoji">
-        <img class="copy-clipboard" src="assets/images/clipboard.png" alt="Copy to clipboard">
-      </button>
-    </div>
-  </section>
+        <div class="ph2-ns">
+          <div class="fl w-100 pa2">
+            <div class="bg-white tc pv4">
+              <h1 class="f-5 fw4 ma0">{{hits}}</h1>
+              <h3 class="gray f3 ma0">clicks</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="cf ph2-ns">
+          <div class="fl w-100 w-50-ns pa2">
+            <div class="bg-white pv4">
+              <section class="pa4-l pa3-m">
+                <form class="mw7 center br2-ns ba b--black-10">
+                  <fieldset class="cf bn ma0 pa0">
+                    <div class="cf">
+                      <input id="hash" taborder="1" class="f6 f5-l input-reset bn fl  bg-white pa3 code silver w-100 w-75-m w-80-l br2-ns br--left-ns" type="text" value="{{hash}}" onClick="this.select();" readonly>
+                      <button type="button" taborder="2" class="btn f6 f5-l button-reset fl pv3 tc bn bg-dark-pink dim white pointer w-100 w-25-m w-20-l br2-ns br--right-ns" data-clipboard-target="#hash">
+                        <span class="pr2">Copy</span>
+                      </button>
+                    </div>
+                  </fieldset>
+                </form>
+              </section>
+            </div>
+          </div>
+          <div class="fl w-100 w-50-ns pa2">
+            <div class="bg-white pv4">
+              <section class="pa4-l pa3-m">
+                <form class="mw7 center br2-ns ba b--black-10">
+                  <fieldset class="cf bn ma0 pa0">
+                    <div class="cf">
+                      <input id="hash-emoji" taborder="3" class="f6 f5-l input-reset bn fl  bg-white pa3 code silver w-100 w-75-m w-80-l br2-ns br--left-ns" type="text" value="{{hashEmoji}}" onClick="this.select();" readonly>
+                      <button type="button" taborder="4" class="btn f6 f5-l button-reset fl pv3 tc bn bg-dark-pink dim white pointer w-100 w-25-m w-20-l br2-ns br--right-ns" data-clipboard-target="#hash-emoji">
+                        <span class="pr2">Copy</span>
+                      </button>
+                    </div>
+                  </fieldset>
+                </form>
+              </section>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+
+    <footer class="pv4 ph3 ph5-m ph6-l mid-gray">
+      <div class="tc mt3">
+        <a href="/faq/" title="FAQ" class="f6 dib ph2 link mid-gray dim">FAQ</a>
+        <a href="mailto:josefrancisco.verdu@gmail.com?subject=Hello, I saw Fink!" title="Contact" class="f6 dib ph2 link mid-gray dim ">Contact</a>
+        <a href="/ " title="🐀" class="f6 dib ph2 link mid-gray dim ">🐀</a>
+      </div>
+    </footer>
+  </div>
 </main>

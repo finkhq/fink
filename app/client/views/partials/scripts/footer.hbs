@@ -1,5 +1,7 @@
+<script src="/assets/js/riot.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="{{ asset "js/fink.js"}}" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
 <script>
   riot.mount('shorten')
-  if (document.getElementsByClassName('copy-button')) new Clipboard('.copy-button')
+  new Clipboard('.btn');
 </script>

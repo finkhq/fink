@@ -1,50 +1,43 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Fink | {{#if title}} {{title}} {{else}} URL Shortener for Masses. {{/if}}</title>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="referrer" content="always"/>
-    <meta name="keywords" content="shorten, uri, url, share, emoji"/>
-    <meta name="description" content="Get the most shorten unique URL for whatever URI. Also supports emojis to be more social friendly!"/>
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicon/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicon/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicon/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon/apple-touch-icon-152x152.png">
-    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/assets/images/favicon/manifest.json">
-    <link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico">
-    <meta name="apple-mobile-web-app-title" content="Fink Shortener">
-    <meta name="application-name" content="Fink Shortener">
-    <meta name="msapplication-TileColor" content="#9b4dca">
-    <meta name="msapplication-TileImage" content="/assets/images/favicon/mstile-144x144.png">
-    <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#9b4dca">
+<head>
+  <title>Fink,
+    {{#if title}} {{title}} {{else}}URL Shortener for Masses.{{/if}}
+  </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="referrer" content="always" />
+  <meta name="keywords" content="shorten, uri, url, share, emoji" />
+  <meta name="description" content="Get the most shorten unique URL for whatever URI. Also supports emojis to be more social friendly!" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    {{> scripts/head}}
-  </head>
-  <body>
-    {{{body}}}
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/assets/images/favicon/manifest.json">
+  <link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="Fink Shortener">
+  <meta name="application-name" content="Fink Shortener">
+  <meta name="msapplication-TileColor" content="#9b4dca">
+  <meta name="msapplication-TileImage" content="/assets/images/favicon/mstile-144x144.png">
+  <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#9b4dca"> {{> scripts/head}}
+  <link rel="stylesheet" href="/assets/css/tachyons.min.css" />
+  <link rel="stylesheet" href="/assets/css/spinners.css">
+</head>
 
-    <footer id="footer" class="center {{#if isAbsolute}}absolute{{/if}}">
-      <a href="/faq">FAQ</a>
-      <a href="mailto:josefrancisco.verdu@gmail.com?subject=Hello, I saw Fink!">Contact</a>
+<body>
+  {{{body}}} {{> scripts/footer}} {{> scripts/google_analytics}}
+</body>
 
-      {{#unless isHome}}
-        <a href="/" rel="nofollow">🐀</a>
-      {{/unless}}
-    </footer>
-
-    {{> scripts/footer}}
-    {{> scripts/google_analytics}}
-  </body>
 </html>
