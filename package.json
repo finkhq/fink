@@ -53,10 +53,12 @@
     "gulp-autoprefixer": "latest",
     "gulp-changed": "latest",
     "gulp-concat": "latest",
-    "gulp-riot": "latest",
+    "gulp-cssnano": "latest",
     "gulp-if": "latest",
+    "gulp-riot": "latest",
     "gulp-sass": "latest",
     "gulp-strip-css-comments": "latest",
+    "gulp-uglify": "latest",
     "level-mem": "latest",
     "mocha": "latest",
     "nodemon": "latest",
@@ -64,7 +66,7 @@
     "standard": "latest"
   },
   "engines": {
-    "node": ">= 4"
+    "node": ">= 6"
   },
   "scripts": {
     "clean": "rm -rf node_modules",
