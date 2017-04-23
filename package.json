@@ -68,7 +68,7 @@
   },
   "scripts": {
     "clean": "rm -rf node_modules",
-    "preinstall": "ln -s /tmp node_modules/.tmp",
+    "build": "ln -s /tmp node_modules/.tmp",
     "lint": "standard app",
     "pretest": "npm run lint",
     "dev": "NODE_ENV=development NODE_PATH=./ DEBUG=fink-www nodemon index.js",
