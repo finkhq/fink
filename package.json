@@ -22,8 +22,6 @@
     "🐀"
   ],
   "dependencies": {
-    "async": "~2.3.0",
-    "base64-emoji": "~2.1.0",
     "body-parser": "~1.17.1",
     "compression": "~1.6.2",
     "config": "~1.25.1",
