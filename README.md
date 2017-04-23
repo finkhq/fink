@@ -14,14 +14,18 @@
 [![NPM Status](http://img.shields.io/npm/dm/fink.svg?style=flat-square)](https://www.npmjs.org/package/fink)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/kikobeats)
 
-> URL Shortener for Massses.
+> URI Shortener for Massses.
 
-* Extremely Faster.
-* Small URL possible based into an internal counter.
+Fink is a [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) shortener. The idea is similar to a [URL](https://en.wikipedia.org/wiki/URL) shortener but supporting redirect between protocols. (For example, redirecting from HTTP → BiTtorrent).
+
+The features of this project are:
+
+* Extremely Faster (Based on [LevelDB](https://github.com/finkhq/fink-level#fink-level)).
+* Small minification as possible (Based on [Base58](https://github.com/finkhq/fink-shortener#fink-shortener)) encode.
 * Unique identifier per URI. Not possible store duplicates!
-* Stats associated with each URI.
-* Redirect between protocols.
-* Emoji support 😁🤓😎.
+* Total clicks associated with URI.
+* Redirection between protocols. (For example: HTTP → BiTtorrent)
+* Emojify version of the URI 😁🤓😎.
 
 ## License
 
