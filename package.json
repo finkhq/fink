@@ -22,7 +22,7 @@
     "🐀"
   ],
   "dependencies": {
-    "body-parser": "~1.17.1",
+    "body-parser": "~1.18.0",
     "compression": "~1.6.2",
     "config": "~1.25.1",
     "cors": "~2.8.1",
