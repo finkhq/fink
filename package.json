@@ -24,7 +24,7 @@
   "dependencies": {
     "body-parser": "~1.17.1",
     "compression": "~1.6.2",
-    "config": "~1.25.1",
+    "config": "~3.0.0",
     "cors": "~2.8.1",
     "debug": "~2.6.3",
     "existential-default-deep": "~1.0.0",
